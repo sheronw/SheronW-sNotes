@@ -1,7 +1,6 @@
 site_name: SheronW's Notes
 theme:
         name: material
-site_dir: /var/www/notes.sheronw.xyz
 markdown_extensions:
         - mdx_math
 extra_javascript:
