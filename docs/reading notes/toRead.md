@@ -6,7 +6,6 @@
 *   Age of anger: a history of the present
 *   Abstract City NC975.5.N54 A35 2012
 *   24/7: Late Captitalism & the Ends of Sleep
-*   Creative Selection by KenKocienda
 *   The Productive Programmer
 *   The Pragmatic Programmer
 *   inspired: how to create tech products customers love / Marty Cagan
@@ -22,7 +21,7 @@
 *   Simple and Usable Web, Mobile, and Interaction Design
 *   Designing Web Interfaces: Principles and Patterns for Rich Interactions
 *   Design for Hackers: Reverse Engineering Beauty  
-     
+  
 
 ## 简体中文
 
@@ -35,4 +34,3 @@
 *   应物兄 by 李洱
 *   雨 by 黄锦树
 *   一个乐观主义者在美国
-*   资本之都：21世纪德里的美好与野蛮
