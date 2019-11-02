@@ -36,7 +36,7 @@
     
     
       
-        <title>Context-Free & PDA - SheronW's Notes</title>
+        <title>1.2 nondeterminism - SheronW's Notes</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#context-free-pda" tabindex="1" class="md-skip">
+      <a href="#12-nondeterminism" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Context-Free & PDA
+                1.2 nondeterminism
               
             </span>
           
@@ -354,6 +354,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../1-1 finite automata/" title="1.1 finite automata" class="md-nav__link">
+      1.1 finite automata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -365,11 +377,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Context-Free & PDA
+        1.2 nondeterminism
       </label>
     
-    <a href="./" title="Context-Free & PDA" class="md-nav__link md-nav__link--active">
-      Context-Free & PDA
+    <a href="./" title="1.2 nondeterminism" class="md-nav__link md-nav__link--active">
+      1.2 nondeterminism
     </a>
     
       
@@ -383,63 +395,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-chomsky-hierarchy" class="md-nav__link">
-    The Chomsky Hierarchy
+  <a href="#formal-def-of-nfa" class="md-nav__link">
+    Formal Def of NFA
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ambiguity" class="md-nav__link">
-    Ambiguity
+  <a href="#equivalence-of-nfas-dfas" class="md-nav__link">
+    Equivalence of NFAs &amp; DFAs
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pda" class="md-nav__link">
-    PDA
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#transition-notation" class="md-nav__link">
-    Transition Notation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pda-context-free-grammar" class="md-nav__link">
-    PDA &lt;=&gt; Context-Free Grammar
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#context-free-grammar-pda" class="md-nav__link">
-    Context-Free Grammar =&gt; PDA
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pda-context-free-grammar_1" class="md-nav__link">
-    PDA =&gt; Context-Free Grammar
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -451,6 +416,30 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1-3 regular expressions/" title="1.3 regular expressions" class="md-nav__link">
+      1.3 regular expressions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2-1 grammar/" title="2.1 Context-Free & PDA" class="md-nav__link">
+      2.1 Context-Free & PDA
+    </a>
   </li>
 
         
@@ -797,63 +786,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-chomsky-hierarchy" class="md-nav__link">
-    The Chomsky Hierarchy
+  <a href="#formal-def-of-nfa" class="md-nav__link">
+    Formal Def of NFA
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ambiguity" class="md-nav__link">
-    Ambiguity
+  <a href="#equivalence-of-nfas-dfas" class="md-nav__link">
+    Equivalence of NFAs &amp; DFAs
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pda" class="md-nav__link">
-    PDA
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#transition-notation" class="md-nav__link">
-    Transition Notation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pda-context-free-grammar" class="md-nav__link">
-    PDA &lt;=&gt; Context-Free Grammar
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#context-free-grammar-pda" class="md-nav__link">
-    Context-Free Grammar =&gt; PDA
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pda-context-free-grammar_1" class="md-nav__link">
-    PDA =&gt; Context-Free Grammar
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -874,89 +816,43 @@
               
                 
                 
-                <h1 id="context-free-pda">Context-Free &amp; PDA</h1>
-<h2 id="the-chomsky-hierarchy">The Chomsky Hierarchy</h2>
-<table>
-<thead>
-<tr>
-<th>Grammar</th>
-<th>Rules</th>
-<th>Machine</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Regular</td>
-<td>A -&gt; a or A -&gt; aB</td>
-<td>DFA</td>
-</tr>
-<tr>
-<td>Context-free</td>
-<td>A -&gt; alpha</td>
-<td>PDA</td>
-</tr>
-<tr>
-<td>Context-sensitive</td>
-<td>alpha -&gt; beta</td>
-<td>Turing Machine with bounded memory</td>
-</tr>
-<tr>
-<td>Arbitrary</td>
-<td>/</td>
-<td>Turing Machine</td>
-</tr>
-</tbody>
-</table>
-<p><em>alpha &amp; beta means combinations of both terminal and non-terminal symbols</em></p>
-<h2 id="ambiguity">Ambiguity</h2>
-<p>A grammar is called <strong>ambiguous</strong> if it produces two different parse trees for the same string. </p>
-<p>We can use such hierarchies to disambiguate grammars. </p>
-<p>The problem of determining whether a given grammar is ambiguous is undecidable. </p>
-<h2 id="pda">PDA</h2>
-<p>
-<script type="math/tex">\epsilon - NFA</script>+stack</p>
-<h3 id="transition-notation">Transition Notation</h3>
-<table>
-<thead>
-<tr>
-<th>Notation</th>
-<th>Means</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a,b|cb</td>
-<td>on input a with b on top of the stack, push c (on top of b)</td>
-</tr>
-<tr>
-<td>a,b|c</td>
-<td>on input a with b on top of the stack, pop the stack and push c</td>
-</tr>
-<tr>
-<td>a,b|<script type="math/tex">\epsilon</script>
-</td>
-<td>on input a with b on top of the stack, pop the stack</td>
-</tr>
-</tbody>
-</table>
-<p>ID Analysis: (State, remained input, stuffs on the stack)</p>
-<p>from top of the stack to the bottom: from left to right</p>
-<h2 id="pda-context-free-grammar">PDA &lt;=&gt; Context-Free Grammar</h2>
-<h3 id="context-free-grammar-pda">Context-Free Grammar =&gt; PDA</h3>
-<p>construct a PDA that has only one state Q accepted by empty stack</p>
+                <h1 id="12-nondeterminism">1.2 nondeterminism</h1>
 <ul>
-<li>begin: <script type="math/tex">\epsilon, \epsilon | S</script>
+<li>Determinism(DFA) is a subset of nondeterminism(NFA).</li>
+<li>For each letter in DFA, it could only be on only one arrow.</li>
+<li>NFA may have <script type="math/tex">\varepsilon</script> on the arrow，means one or many arrows may exit from this state(zero).</li>
+<li>If a string in a branch is accepted, then NFA accepts the input string.</li>
+</ul>
+<h2 id="formal-def-of-nfa">Formal Def of NFA</h2>
+<p>A nondeterministic finite automation is a 5-tuple(<script type="math/tex">Q, \Sigma, \delta, q_0, F</script>), where:</p>
+<ul>
+<li>
+<script type="math/tex">Q</script> is a Finite set of states</li>
+<li>
+<script type="math/tex">\Sigma</script> is a finite alphabet</li>
+<li>
+<script type="math/tex">\delta : Q \times \Sigma_{\varepsilon} \rightarrow P(Q)</script> is the transition function</li>
+<li>
+<script type="math/tex">q_0 \in Q</script> is the start state</li>
+<li>
+<script type="math/tex">F \subseteq Q</script> is the set of accept states</li>
+</ul>
+<p>Formal Def of <strong>computation</strong> for an NFA:</p>
+<p>Let N=(<script type="math/tex">Q, \Sigma, \delta, q_0, F</script>) be an NFA and <script type="math/tex">w</script> a string over the alphabet <script type="math/tex">\Sigma</script>. Then we say that N asscepts <script type="math/tex">w</script> if we can write <script type="math/tex">w</script> as <script type="math/tex">w=y_1 y_2 \cdots y_m</script>, where each <script type="math/tex">y_i</script> is a member of <script type="math/tex">\Sigma_{\varepsilon}</script> and a sequence of states <script type="math/tex">r_0, r_1, \cdots, r_m</script> exists in <script type="math/tex">Q</script> with the following three conditions:</p>
+<ul>
+<li>
+<script type="math/tex">r_0 = q_0</script>
 </li>
-<li>for <script type="math/tex">A = A_1 \cdots A_k</script>: <script type="math/tex">\epsilon, A | A_1 \cdots A_k</script>
+<li>
+<script type="math/tex">r_{i+1} \in \delta (r_i, y_{i+1}) \text{ , for } i=0, \cdots, m-1</script>
 </li>
-<li>for terminal symbol a: <script type="math/tex">a,a | \epsilon</script>
+<li>
+<script type="math/tex">r_m \in F</script>
 </li>
 </ul>
-<p>this PDA just use epsilon to push the rule to the stack, cancel out corresponding chars and do it over and over again until both the stack and the string are empty</p>
-<h3 id="pda-context-free-grammar_1">PDA =&gt; Context-Free Grammar</h3>
-<p>Chomsky is a f**king genius.</p>
-<p>construct a huge grammar between any possible states</p>
-<p><a href="http://cs.oberlin.edu/~bob/cs383/Class%20Notes/October/October%2018/Chomsky%20contruction%20notes.pdf">Handout</a></p>
+<h2 id="equivalence-of-nfas-dfas">Equivalence of NFAs &amp; DFAs</h2>
+<p>Two machines are equivalent if they recognize the same language.</p>
+<p>Every nondeterministic finite automation has an equivalent deterministic finite automation.</p>
                 
                   
                 
@@ -977,7 +873,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../C/Formatted-I-O-Line-Input-Scanf-C/" title="Formatted I/O, Line Input, Scanf - C" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1-1 finite automata/" title="1.1 finite automata" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -986,19 +882,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Formatted I/O, Line Input, Scanf - C
+                1.1 finite automata
               </span>
             </div>
           </a>
         
         
-          <a href="../../../excerpt/akayaakashiyaayakashino/" title="あかやあかしやあやかしの" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1-3 regular expressions/" title="1.3 regular expressions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                あかやあかしやあやかしの
+                1.3 regular expressions
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
