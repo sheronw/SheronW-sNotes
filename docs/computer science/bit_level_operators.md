@@ -31,3 +31,5 @@ x^1=!x
 
 ## 应用……？
 刚刚看到了[这么一道题](https://blog.coca.moe/post/er-jin-zhi-mei-ju)，发现和当初学离散数学的时候遇到的那个小朋友分饼干的题型有点像，都是二进制的应用，就当是位运算的一个实例放在这里了。
+
+when x & 1 ==0, the last bit in x is 0

@@ -20,7 +20,7 @@ $$L_2 = \{0^j 1^n 2^n | j \geq 0, n \geq 0\}$$
 
 $$L_1 \cap L_2 = \{0^n 1^n 2^n | n \geq 0\}$$, which is not CF
 
-**If \(L\) is CF, \(R\) is regular. Then \(L \cap R\) is CF, \(L \backslash R\) is CF.
+**If \(L\) is CF, \(R\) is regular. Then \(L \cap R\) is CF, \(L \backslash R\) is CF.**
 
 Why?
 
