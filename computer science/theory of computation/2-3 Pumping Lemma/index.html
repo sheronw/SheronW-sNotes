@@ -461,6 +461,26 @@
     An non-CFL that can be pumped
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l-is-not-cfl" class="md-nav__link">
+    L is not CFL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-can-be-pumped" class="md-nav__link">
+    L can be pumped
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -847,6 +867,26 @@
     An non-CFL that can be pumped
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l-is-not-cfl" class="md-nav__link">
+    L is not CFL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-can-be-pumped" class="md-nav__link">
+    L can be pumped
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -874,18 +914,40 @@
 <script type="math/tex">|vwx| \leq p</script>
 </li>
 <li>
-<script type="math/tex">vx \not = \\varepsilon</script>
+<script type="math/tex">vx \not = \varepsilon</script>
 </li>
 <li>
-<script type="math/tex">\forall i, uviwx^i y \in L</script>
+<script type="math/tex">\forall i, uv^i wx^i y \in L</script>
 </li>
 </ul>
 <h2 id="an-non-cfl-to-prove-that-cannot-be-pumped">An non-CFL to prove that cannot be pumped</h2>
 <p>
 <script type="math/tex; mode=display">L = \{0^n 1^n 2^n | n \geq 0\}</script>
 </p>
-<p>Suppose it is context free. Let p be its pumping constant. Let <script type="math/tex">z = 0^p1^p 2^p</script> be a string longer than p and in the language. Suppose we have a decomposition <script type="math/tex">uvwxy</script>, where</p>
+<p>Suppose it is context free. Let p be its pumping constant. Let <script type="math/tex">z = 0^p 1^p 2^p</script> be a string longer than p and in the language. Suppose we have a decomposition <script type="math/tex">uvwxy</script>, where <script type="math/tex">|vwx| \leq p</script>, so <script type="math/tex">uwx</script> cannot include all three letters because it is too short.</p>
+<p>then we pumped the string to <script type="math/tex">uv^2 wx^2 y</script>, which cannot be in the language. Because the letter that cannot be covered in <script type="math/tex">uwx</script> cannot get repeated then there is less numbers of it in the new string.</p>
+<p>So <script type="math/tex">uv^2 wx^2 y</script> is not in the language, which contradicted to the pumping lemma.</p>
 <h2 id="an-non-cfl-that-can-be-pumped">An non-CFL that can be pumped</h2>
+<p>
+<script type="math/tex; mode=display">L = \{a^i b^j c^k d^l| \text{if i=1 then j=k=l,} i, j, k, l \geq 0\}</script>
+</p>
+<h3 id="l-is-not-cfl">L is not CFL</h3>
+<p>Suppose L is context free. We know that <script type="math/tex">ab*c*d*</script> is a regular language R. Then the intersection <script type="math/tex">L \cap R</script> should also be context-free. However, <script type="math/tex">L \cap R = \{ab^j c^j d^j | j \geq 0\}</script>, which is not context-free. Contradiction.</p>
+<h3 id="l-can-be-pumped">L can be pumped</h3>
+<p>
+<script type="math/tex; mode=display">L = L_1 \cup L_2 \cup L_3</script>
+</p>
+<p>
+<script type="math/tex; mode=display">L_1 = \{b^j c^k d^l | i, j, k \geq 0\}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">L_2 = \{ab^i c^i d^i | i \geq 0\}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">L_3 = \{a^i b^j c^k d^l | i, j, k, l \geq 0\}</script>
+</p>
+<p>First of all, <script type="math/tex">L_1</script> and <script type="math/tex">L_3</script> are regular languages, so all strings in them can be pumped.</p>
+<p>Let p be the pumping constant of <script type="math/tex">L_2</script>, <script type="math/tex">z = a b^p c^p d^p</script>, no matter what the value of <script type="math/tex">vwx</script> is, the pumped string <script type="math/tex">uv^2 w x^w y</script> can belong to <script type="math/tex">L_3</script>, which is still in L. So L is pumpable.</p>
                 
                   
                 
