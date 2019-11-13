@@ -1,4 +1,4 @@
-# 2.1 Normal Forms for CFG
+# 2.2 Normal Forms for CFG
 
 A grammar is said to be in **Chomsky Normal Form (CNF)** if all of its grammar rules follow one of the two patterns:
 

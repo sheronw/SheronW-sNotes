@@ -4,7 +4,7 @@
 
 - \(L_1 \cup L_2\)
 - \(L_1 L_2\)
-- \((L_1)*\)
+- \((L_1)^*\)
 
 You could genertate new Grammars to prove them easily.
 
