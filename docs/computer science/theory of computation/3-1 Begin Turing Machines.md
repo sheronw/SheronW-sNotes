@@ -20,7 +20,7 @@ a Turing Machine is \((Q,\Sigma,\Gamma,\delta,s,B,F)​\), where:
 - \(Q\) is the set of states
 - \(\Sigma\) is the alphabet of input symbols
 - \(\Gamma\) is the tape alphabet \(\Sigma<\Gamma\)
-- \(\Delta\) is the transition function sigma(q,a)=(r, b,R):if you are in state q and a is the current take symbol, then switch to state r and change the symbol to b and move right.
+- \(\delta\) is the transition function \(\sigma(q,a)=(r, b,R)\):if you are in state q and a is the current take symbol, then switch to state r and change the symbol to b and move right.
 - \(s\) is the start state
 - \(B\) is the blank symbol in the tape (which is blank on the tape)
 - \(F\) is the set of final states
