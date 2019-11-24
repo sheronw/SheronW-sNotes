@@ -38,3 +38,19 @@ $$L = \{0^n 1^n | n>0\}$$
 \(q_2\): Move L over 0s and Ys. When we get to X move R to \(q_0\)
 
 \(q_3\): move R over Ys, if we get to a B then accept.
+
+## Features
+
+Configuration (write all current symbols on the stack and put the state symbol before the position of current head)
+
+We say that a L accepted by a TM is **recursively enumerable** (know result only when halts), halts in a input is **recursive**(yes/no decider).
+
+## Variances
+
+We can think of a TM with k synchonized tracks by using ordered tuples (symbol of first track, symbol of second track, etc.). Usually the first track contains the input and the others initially blank.
+
+We could also have multiple independent tapes. To achieve that, we have to use one taple and one head to simulate all those independent tapes.
+
+Also, any deterministic TM could simulate non-deterministic TMs.
+
+We can use TM to simulate multi-stack PDA, and we can use 2-stack PDA to simulate TM.
