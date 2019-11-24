@@ -36,7 +36,7 @@
     
     
       
-        <title>1.1 finite automata - SheronW's Notes</title>
+        <title>Object-Oriented Programming - SheronW's Notes</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#11-finite-automata" tabindex="1" class="md-skip">
+      <a href="#object-oriented-programming" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                1.1 finite automata
+                Object-Oriented Programming
               
             </span>
           
@@ -333,10 +333,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" checked>
     
     <label class="md-nav__link" for="nav-3-6">
       Design patterns
@@ -344,44 +346,6 @@
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-6">
         Design patterns
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../design patterns/01 oop/" title="Object-Oriented Programming" class="md-nav__link">
-      Object-Oriented Programming
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7" checked>
-    
-    <label class="md-nav__link" for="nav-3-7">
-      Theory of computation
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-7">
-        Theory of computation
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -401,11 +365,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        1.1 finite automata
+        Object-Oriented Programming
       </label>
     
-    <a href="./" title="1.1 finite automata" class="md-nav__link md-nav__link--active">
-      1.1 finite automata
+    <a href="./" title="Object-Oriented Programming" class="md-nav__link md-nav__link--active">
+      Object-Oriented Programming
     </a>
     
       
@@ -419,23 +383,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#finite-automata-finite-state-machine" class="md-nav__link">
-    finite automata = finite state machine
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-oriented-or-object-orented" class="md-nav__link">
+    Procedure Oriented or Object Orented?
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ex" class="md-nav__link">
-    e.x. 自动门
+  <a href="#procedure-oriented" class="md-nav__link">
+    Procedure Oriented?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ex-markov-chains" class="md-nav__link">
-    e.x. Markov chains
+  <a href="#why-oop-better" class="md-nav__link">
+    Why OOP better?
   </a>
   
 </li>
@@ -446,29 +417,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#formal-def-of-a-finite-automation" class="md-nav__link">
-    Formal Def of a Finite Automation
+  <a href="#fake-oop" class="md-nav__link">
+    Fake OOP
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#formal-def-of-computation" class="md-nav__link">
-    Formal Def of Computation
+  <a href="#abstraction-or-interface" class="md-nav__link">
+    Abstraction or Interface?
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abstractionis-a" class="md-nav__link">
+    Abstraction(is-a)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interfacehas-abehaves-like" class="md-nav__link">
+    Interface(has-a/behaves like)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-we-need-abstraction" class="md-nav__link">
+    Why we need abstraction?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-we-need-interface" class="md-nav__link">
+    Why we need interface?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#designing-finite-automata" class="md-nav__link">
-    Designing Finite Automata
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-regular-operations" class="md-nav__link">
-    The Regular Operations
+  <a href="#program-to-an-interface-not-an-implementation" class="md-nav__link">
+    Program to an interface, not an implementation
   </a>
   
 </li>
@@ -484,13 +482,49 @@
   </li>
 
         
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Theory of computation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        Theory of computation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../1-2 nondeterminism/" title="1.2 nondeterminism" class="md-nav__link">
+    <a href="../../theory of computation/1-1 finite automata/" title="1.1 finite automata" class="md-nav__link">
+      1.1 finite automata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theory of computation/1-2 nondeterminism/" title="1.2 nondeterminism" class="md-nav__link">
       1.2 nondeterminism
     </a>
   </li>
@@ -502,7 +536,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../1-3 regular expressions/" title="1.3 regular expressions" class="md-nav__link">
+    <a href="../../theory of computation/1-3 regular expressions/" title="1.3 regular expressions" class="md-nav__link">
       1.3 regular expressions
     </a>
   </li>
@@ -514,7 +548,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-1 grammar/" title="2.1 Context-Free & PDA" class="md-nav__link">
+    <a href="../../theory of computation/2-1 grammar/" title="2.1 Context-Free & PDA" class="md-nav__link">
       2.1 Context-Free & PDA
     </a>
   </li>
@@ -526,7 +560,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-2 CFG Normal Forms/" title="2.2 Normal Forms for CFG" class="md-nav__link">
+    <a href="../../theory of computation/2-2 CFG Normal Forms/" title="2.2 Normal Forms for CFG" class="md-nav__link">
       2.2 Normal Forms for CFG
     </a>
   </li>
@@ -538,7 +572,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-3 Pumping Lemma/" title="2.3 Pumping Lemma for CFL" class="md-nav__link">
+    <a href="../../theory of computation/2-3 Pumping Lemma/" title="2.3 Pumping Lemma for CFL" class="md-nav__link">
       2.3 Pumping Lemma for CFL
     </a>
   </li>
@@ -550,7 +584,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-4 CFL properties/" title="2.4 CFL Properties" class="md-nav__link">
+    <a href="../../theory of computation/2-4 CFL properties/" title="2.4 CFL Properties" class="md-nav__link">
       2.4 CFL Properties
     </a>
   </li>
@@ -562,7 +596,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-5 Decision Algorithms/" title="2.5 Decision Algorithms" class="md-nav__link">
+    <a href="../../theory of computation/2-5 Decision Algorithms/" title="2.5 Decision Algorithms" class="md-nav__link">
       2.5 Decision Algorithms
     </a>
   </li>
@@ -574,7 +608,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../3-1 Begin Turing Machines/" title="3.1 Begin Turing Machines" class="md-nav__link">
+    <a href="../../theory of computation/3-1 Begin Turing Machines/" title="3.1 Begin Turing Machines" class="md-nav__link">
       3.1 Begin Turing Machines
     </a>
   </li>
@@ -935,23 +969,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#finite-automata-finite-state-machine" class="md-nav__link">
-    finite automata = finite state machine
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-oriented-or-object-orented" class="md-nav__link">
+    Procedure Oriented or Object Orented?
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ex" class="md-nav__link">
-    e.x. 自动门
+  <a href="#procedure-oriented" class="md-nav__link">
+    Procedure Oriented?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ex-markov-chains" class="md-nav__link">
-    e.x. Markov chains
+  <a href="#why-oop-better" class="md-nav__link">
+    Why OOP better?
   </a>
   
 </li>
@@ -962,29 +1003,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#formal-def-of-a-finite-automation" class="md-nav__link">
-    Formal Def of a Finite Automation
+  <a href="#fake-oop" class="md-nav__link">
+    Fake OOP
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#formal-def-of-computation" class="md-nav__link">
-    Formal Def of Computation
+  <a href="#abstraction-or-interface" class="md-nav__link">
+    Abstraction or Interface?
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abstractionis-a" class="md-nav__link">
+    Abstraction(is-a)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interfacehas-abehaves-like" class="md-nav__link">
+    Interface(has-a/behaves like)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-we-need-abstraction" class="md-nav__link">
+    Why we need abstraction?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-we-need-interface" class="md-nav__link">
+    Why we need interface?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#designing-finite-automata" class="md-nav__link">
-    Designing Finite Automata
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-regular-operations" class="md-nav__link">
-    The Regular Operations
+  <a href="#program-to-an-interface-not-an-implementation" class="md-nav__link">
+    Program to an interface, not an implementation
   </a>
   
 </li>
@@ -1006,61 +1074,63 @@
               
                 
                 
-                <h1 id="11-finite-automata">1.1 finite automata</h1>
-<h2 id="finite-automata-finite-state-machine">finite automata = finite state machine</h2>
-<p>computational model: idealized computer</p>
-<h3 id="ex">e.x. 自动门</h3>
-<p>需要1bit来存储state
-- state: 开启/关闭
-- condition: 前面有人后面没人、前面没人后面没人……</p>
-<h3 id="ex-markov-chains">e.x. Markov chains</h3>
-<p>patterns of data</p>
-<h2 id="formal-def-of-a-finite-automation">Formal Def of a Finite Automation</h2>
-<p>A finite automation is a 5-tuple(<script type="math/tex">Q, \Sigma , \delta , q_0 ,F</script>),where:</p>
+                <h1 id="object-oriented-programming">Object-Oriented Programming</h1>
+<h2 id="features">Features</h2>
 <ul>
-<li>Q is a finite set called the states</li>
-<li>
-<script type="math/tex">\Sigma</script> is a finite set called the alphabet</li>
-<li>
-<script type="math/tex">\delta : Q \times \Sigma \rightarrow Q</script> is the transition function</li>
-<li>
-<script type="math/tex">q_0 \in Q</script> is the start state</li>
-<li>
-<script type="math/tex">F \subseteq Q</script> is the set of accept states</li>
+<li>Encapsulation</li>
+<li>Abstract</li>
+<li>Inheritance</li>
+<li>Polymorphism</li>
 </ul>
-<p><strong>language of machine M: L(M)=A</strong></p>
-<p>If <script type="math/tex">A=\{w|M accepts w\}</script>, then M recognizes A</p>
-<h2 id="formal-def-of-computation">Formal Def of Computation</h2>
-<p>Let M=(<script type="math/tex">Q, \Sigma , \delta , q_0 , F</script>) be a finite automation and <script type="math/tex">w=w_1 w_2 \cdots w_n</script> be a string over alphabet <script type="math/tex">\Sigma</script>. Then M accepts w if a sequence of states <script type="math/tex">r_0 r_1 \cdots r_n</script> exists in Q with the following three conditions:</p>
+<h2 id="procedure-oriented-or-object-orented">Procedure Oriented or Object Orented?</h2>
+<h3 id="procedure-oriented">Procedure Oriented?</h3>
+<p>Early languages such as C. Linear. Which is not suitable for large-scale non-linear develpment.</p>
+<p>You could still use oop thoughts in procedure oriented languages.</p>
+<h3 id="why-oop-better">Why OOP better?</h3>
+<p>Good for handling non-linear complicated tasks.</p>
+<p>It is easier for human-being to abstract the really demand or world to classes, instead of linear tasks in computers. So it is easier to implement certain features.</p>
+<p>Also, high maintainability, readability, extensibility, flexibility, simplicity, reusability, testability, etc.</p>
+<h2 id="fake-oop">Fake OOP</h2>
 <ul>
-<li>
-<script type="math/tex">r_0 = q_0</script>
-</li>
-<li>
-<script type="math/tex">\delta (r_i , w_{i+1}) = r_{i+1}</script>, for <script type="math/tex">i = 0, \cdots , n-1</script>
-</li>
-<li>
-<script type="math/tex">r_n \in F</script>
-</li>
+<li>too many getter, setter(encapsulation NG)</li>
+<li>unsuitable global variables or methods</li>
+<li>big classes such as Constants or Utils(no abstraction)</li>
+<li>separate data and method in class(one exception is, anaemic model is widely used in web develpment)</li>
 </ul>
-<p>A language is called a <strong>regular language</strong> if some finite automation recognizes it.</p>
-<h2 id="designing-finite-automata">Designing Finite Automata</h2>
-<p>收集作出决策（每读入一个字母时）所必要的最精简信息，然后决定用几个状态来储存这些信息，并寻找他们之间的逻辑，最后确定start state和set of accept states。</p>
-<p>另外还可以分类讨论每一个input</p>
-<h2 id="the-regular-operations">The Regular Operations</h2>
-<p>i.e. the properties of finite automata &amp; regular languages
-<strong>Let A and B be languages.</strong>
-Define regular operations as follows:</p>
+<h2 id="abstraction-or-interface">Abstraction or Interface?</h2>
+<h3 id="abstractionis-a">Abstraction(is-a)</h3>
 <ul>
-<li>Union: <script type="math/tex">A \cup B = \{x | x \in A \text{ or } x \in B\}</script>
-</li>
-<li>Concatenation: <script type="math/tex">A \circ B = \{xy | x \in A \text{ and } y \in B \}</script>
-</li>
-<li>Star: <script type="math/tex">A^* = \{ x_1 x_2 \cdots x_k | k \geq 0 \text{ and each } x_i \in A\}</script>
-</li>
+<li>could only be created by interitance(keyword: extends)</li>
+<li>including both abstract method and real method</li>
+<li>all abstract methods have to be implemented by children</li>
 </ul>
-<p>The class of regular languages is closed under these operation.
-(It will be easier for us to prove after learning nondeterminism.)</p>
+<h3 id="interfacehas-abehaves-like">Interface(has-a/behaves like)</h3>
+<ul>
+<li>could only have abstract methods(no implementation or vars)</li>
+<li>all methods have to be implemented by children</li>
+<li>keyword: implements</li>
+</ul>
+<h3 id="why-we-need-abstraction">Why we need abstraction?</h3>
+<p>Reusabiilty</p>
+<p>In general, we could implement the abstraction class function using ordinary class, however, there are some problems about that, for example:</p>
+<ul>
+<li>Children may forgot to implement some certain method</li>
+<li>we could initiate a empty ancestor class</li>
+<li>an empty method will affect the readability of the code</li>
+</ul>
+<h3 id="why-we-need-interface">Why we need interface?</h3>
+<ul>
+<li>decoupling 解耦</li>
+<li>extensability</li>
+</ul>
+<h2 id="program-to-an-interface-not-an-implementation">Program to an interface, not an implementation</h2>
+<p>Separate implementation and interface, only give out stable interface and leave the implementations that might change(decoupling). (Interface Design first)</p>
+<ul>
+<li>never give of details in the name of the method</li>
+<li>encapsulate the implementation of the details</li>
+<li>define interface for classes</li>
+</ul>
+<p>Notice: if a system is designed to be stablized and no need to maintain, then we don't really need to waste time ensuring the extensability.</p>
                 
                   
                 
@@ -1081,7 +1151,7 @@ Define regular operations as follows:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../design patterns/01 oop/" title="Object-Oriented Programming" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../C/Formatted-I-O-Line-Input-Scanf-C/" title="Formatted I/O, Line Input, Scanf - C" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1090,19 +1160,19 @@ Define regular operations as follows:</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Object-Oriented Programming
+                Formatted I/O, Line Input, Scanf - C
               </span>
             </div>
           </a>
         
         
-          <a href="../1-2 nondeterminism/" title="1.2 nondeterminism" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../theory of computation/1-1 finite automata/" title="1.1 finite automata" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                1.2 nondeterminism
+                1.1 finite automata
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

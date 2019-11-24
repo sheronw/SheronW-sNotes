@@ -333,18 +333,54 @@
           
           
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Design patterns
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        Design patterns
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../design patterns/01 oop/" title="Object-Oriented Programming" class="md-nav__link">
+      Object-Oriented Programming
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7" checked>
     
-    <label class="md-nav__link" for="nav-3-6">
+    <label class="md-nav__link" for="nav-3-7">
       Theory of computation
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-6">
+      <label class="md-nav__title" for="nav-3-7">
         Theory of computation
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -509,6 +545,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variances" class="md-nav__link">
+    Variances
+  </a>
   
 </li>
       
@@ -911,6 +961,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variances" class="md-nav__link">
+    Variances
+  </a>
+  
+</li>
+      
       
       
       
@@ -971,6 +1035,14 @@
 </p>
 <p>
 <script type="math/tex">q_3</script>: move R over Ys, if we get to a B then accept.</p>
+<h2 id="features">Features</h2>
+<p>Configuration (write all current symbols on the stack and put the state symbol before the position of current head)</p>
+<p>We say that a L accepted by a TM is <strong>recursively enumerable</strong> (know result only when halts), halts in a input is <strong>recursive</strong>(yes/no decider).</p>
+<h2 id="variances">Variances</h2>
+<p>We can think of a TM with k synchonized tracks by using ordered tuples (symbol of first track, symbol of second track, etc.). Usually the first track contains the input and the others initially blank.</p>
+<p>We could also have multiple independent tapes. To achieve that, we have to use one taple and one head to simulate all those independent tapes.</p>
+<p>Also, any deterministic TM could simulate non-deterministic TMs.</p>
+<p>We can use TM to simulate multi-stack PDA, and we can use 2-stack PDA to simulate TM.</p>
                 
                   
                 
