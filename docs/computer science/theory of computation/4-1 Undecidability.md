@@ -15,13 +15,13 @@ A language L is recursively enumerable if \(L=L(M)\) for some TM \(M\).
 
 ### present TM as a binary string
 
-a) Represent state \(q_i\) with \(0^i\)
-b) Number the tape symbols \(X_1 \cdots X_n\) and represent \(X_i\) with \(0^i\)
-c) Encode the directions L as 01 and R as 02
-d) Encode the transition \(\delta(q_i,X_j)=(q_k,X_l,D_m)\) as \(0^i^10^j10^k10^l10^m\)
-e) Encode the complete transition function as \(t_111t_211 \cdots 11t_n\)
-where the \(t_i\) are the encodings of the individual transitions
-f) Encode the TM with final state \(t_n\) as \(T1110^n\) where T is the encoding of the transition function
+1.  Represent state \(q_i\) with \(0^i\)
+2. Number the tape symbols \(X_1 \cdots X_n\) and represent \(X_i\) with \(0^i\)
+3. Encode the directions L as 01 and R as 02
+4. Encode the transition \(\delta(q_i,X_j)=(q_k,X_l,D_m)\) as \(0^i10^j10^k10^l10^m\)
+5. Encode the complete transition function as \(t_111t_211 \cdots 11t_n\)
+   where the \(t_i\) are the encodings of the individual transitions
+6. Encode the TM with final state \(t_n\) as \(T1110^n\) where T is the encoding of the transition function
 
 ### diagonalization language
 
