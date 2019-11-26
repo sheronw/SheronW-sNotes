@@ -1,4 +1,4 @@
-# 3.1 Begin Turing Machines
+#  3.1 Begin Turing Machines
 
 ## Definition
 
