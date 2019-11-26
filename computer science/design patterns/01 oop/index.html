@@ -471,6 +471,100 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#composition-vs-inheritance" class="md-nav__link">
+    Composition VS Inheritance?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-of-inheritance" class="md-nav__link">
+    Problem of Inheritance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-composition" class="md-nav__link">
+    Why use composition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composition-or-inheritance" class="md-nav__link">
+    Composition or Inheritance?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mvc-vs-ddd" class="md-nav__link">
+    MVC VS DDD
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-view-controller" class="md-nav__link">
+    Model, View, Controller
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anemic-domain-model" class="md-nav__link">
+    Anemic Domain Model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-driven-design" class="md-nav__link">
+    Domain Driven Design
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rich-domain-model" class="md-nav__link">
+    Rich Domain Model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-anemic" class="md-nav__link">
+    Why use anemic?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1069,6 +1163,100 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#composition-vs-inheritance" class="md-nav__link">
+    Composition VS Inheritance?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-of-inheritance" class="md-nav__link">
+    Problem of Inheritance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-composition" class="md-nav__link">
+    Why use composition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composition-or-inheritance" class="md-nav__link">
+    Composition or Inheritance?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mvc-vs-ddd" class="md-nav__link">
+    MVC VS DDD
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-view-controller" class="md-nav__link">
+    Model, View, Controller
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anemic-domain-model" class="md-nav__link">
+    Anemic Domain Model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-driven-design" class="md-nav__link">
+    Domain Driven Design
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rich-domain-model" class="md-nav__link">
+    Rich Domain Model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-anemic" class="md-nav__link">
+    Why use anemic?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1143,6 +1331,31 @@
 <li>define interface for classes</li>
 </ul>
 <p>Notice: if a system is designed to be stablized and no need to maintain, then we don't really need to waste time ensuring the extensability.</p>
+<h2 id="composition-vs-inheritance">Composition VS Inheritance?</h2>
+<h3 id="problem-of-inheritance">Problem of Inheritance</h3>
+<p>Sometimes a parent class cannot handle everything. If we want to divided those children into catagories, one for each feature, then there will be so many subclasses which is not good for the maintainability and readability.</p>
+<h3 id="why-use-composition">Why use composition</h3>
+<p>We could use composition, interface or delegation to solve the problem above.</p>
+<p>First of all, we could try to create interfaces for every features, and let the certain class implement these features. The problems is that all methods in interfaces are abstract methods and we still need to implement all the methods one by one in each class.</p>
+<p>How to solve this problem? We could use composition and delegation.</p>
+<p>We could create implementation classes for all those interfaces and composite those implementation classes into each child class, for example, as a private variable.</p>
+<h3 id="composition-or-inheritance">Composition or Inheritance?</h3>
+<p>As the example above, using composition instead of inheritance requires more granular codes. Then it is not good for maintainability and readability.</p>
+<p>So if the system is stable and the inheritance relationship is shallow, then we could still use inheritance. And some certain design patterns requires the usage of inheritance.</p>
+<h2 id="mvc-vs-ddd">MVC VS DDD</h2>
+<h3 id="model-view-controller">Model, View, Controller</h3>
+<p>The def is not strict, for example, in back end we have repository(data), service(logic), controller(expose interface).</p>
+<h4 id="anemic-domain-model">Anemic Domain Model</h4>
+<p>process oriented</p>
+<p>separate data and logic</p>
+<p>e.x. use userservice class to control data in userBo class</p>
+<h3 id="domain-driven-design">Domain Driven Design</h3>
+<p>Still in three parts: model, view, controller, but in service part, there is one service class and there is one domain class, and we put both data and logic into domain class.</p>
+<h4 id="rich-domain-model">Rich Domain Model</h4>
+<p>put data and logic in the same class, i.e. OOP</p>
+<h3 id="why-use-anemic">Why use anemic?</h3>
+<p>history, easy, simple(logics are mainly included into SQL queries)</p>
+<p>But for complex systems is better to use DDD.</p>
                 
                   
                 

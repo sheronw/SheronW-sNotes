@@ -987,13 +987,18 @@
 <h2 id="a-language-thats-not-recursively-enumerable">A language that's not recursively enumerable</h2>
 <p>A language L is recursively enumerable if <script type="math/tex">L=L(M)</script> for some TM <script type="math/tex">M</script>.</p>
 <h3 id="present-tm-as-a-binary-string">present TM as a binary string</h3>
-<p>a) Represent state <script type="math/tex">q_i</script> with <script type="math/tex">0^i</script>
-b) Number the tape symbols <script type="math/tex">X_1 \cdots X_n</script> and represent <script type="math/tex">X_i</script> with <script type="math/tex">0^i</script>
-c) Encode the directions L as 01 and R as 02
-d) Encode the transition <script type="math/tex">\delta(q_i,X_j)=(q_k,X_l,D_m)</script> as <script type="math/tex">0^i^10^j10^k10^l10^m</script>
-e) Encode the complete transition function as <script type="math/tex">t_111t_211 \cdots 11t_n</script>
-where the <script type="math/tex">t_i</script> are the encodings of the individual transitions
-f) Encode the TM with final state <script type="math/tex">t_n</script> as <script type="math/tex">T1110^n</script> where T is the encoding of the transition function</p>
+<ol>
+<li>Represent state <script type="math/tex">q_i</script> with <script type="math/tex">0^i</script>
+</li>
+<li>Number the tape symbols <script type="math/tex">X_1 \cdots X_n</script> and represent <script type="math/tex">X_i</script> with <script type="math/tex">0^i</script>
+</li>
+<li>Encode the directions L as 01 and R as 02</li>
+<li>Encode the transition <script type="math/tex">\delta(q_i,X_j)=(q_k,X_l,D_m)</script> as <script type="math/tex">0^i10^j10^k10^l10^m</script>
+</li>
+<li>Encode the complete transition function as <script type="math/tex">t_111t_211 \cdots 11t_n</script>
+   where the <script type="math/tex">t_i</script> are the encodings of the individual transitions</li>
+<li>Encode the TM with final state <script type="math/tex">t_n</script> as <script type="math/tex">T1110^n</script> where T is the encoding of the transition function</li>
+</ol>
 <h3 id="diagonalization-language">diagonalization language</h3>
 <p>The language <script type="math/tex">L_d</script>, the diagonalization language, is the set of strings <script type="math/tex">w_i</script> such that <script type="math/tex">w_i</script> is not in <script type="math/tex">L(M_i)</script>.</p>
 <p>Because we could write every TM as binary string and binary string is countable, so we could list all TMs as <script type="math/tex">M_1 \cdots M_i \cdots </script> whose code is <script type="math/tex">w_1 \cdots w_i \cdots </script>.</p>
