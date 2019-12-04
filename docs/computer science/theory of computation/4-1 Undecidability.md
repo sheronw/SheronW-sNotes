@@ -9,9 +9,24 @@ So we have to show some problems to be undecidable.
 
 i.e. Does this TM accept this input?
 
-## A language that's not recursively enumerable
+## Recursive & Recursively Enumerable
 
-A language L is recursively enumerable if \(L=L(M)\) for some TM \(M\).
+A language L is **recursive** if L=L(M) for some Turing machine M such that:
+
+- If w is in L, then M accepts and halts.
+- If w is not in L, then M eventually halts, alghough it never enters an accepting state.
+
+If the language is **recursive** then it is accepted by a TM that always halts.(**Decider**)
+
+A language L is **recursively enumerable** if \(L=L(M)\) for some TM \(M\), but necessary halts for all input. (**Recognizer**)
+
+Not RE > RE > R
+
+If a language is recursive, then its complement is also recursive.
+
+If a language and its complement are both recursively enumerable, then the langauge is recursive.
+
+## A language that's not recursively enumerable
 
 ### present TM as a binary string
 
@@ -48,3 +63,27 @@ If \(w_i \in L_d\), then \(M_i\) should accepts \(w_i\), but according to the de
 If \(w_i \notin L_d\), then \(M_i\) should not accepts \(w_i\), but according to the def of \(L_d\), \(w_i\) is in \(L_d\). Contradiction.
 
 So M not exists. \(L_d\) is not recursively enumerable.
+
+## A language that's RE but not Recursive
+
+The universal language /(L_u/) is {m1111w | m is the encoding of a TM M and w is an input string and M accepts w}.
+
+### Universal Language is RE
+
+We need to build a TM for it. This TM has 3 tapes.
+
+- 1st tape: the string content m1111w
+- 2nd tape: one track for the current string w, the other track is the pointer of the current tape symbol(this tape is to simulate the TM m)
+- 3rd tape: to record the current state of TM m
+
+For the given string m1111w, first put it to 1st tape, then copy w to the 2nd tape and put the pointer to the start of the string. Then go back to 1st tape and read the start state then write to 3rd tape.
+
+Then, we check the current state on 3rd tape and check the next symbol on 2nd tape, then go back to 1st tape part m to see what should do next. We could go to a final state and halt if m accepts w.
+
+### Universal Language is not Recursive
+
+We will prove it by proving that the complement of universal language is not recursive enumerable.
+
+Suppose the complement of universal language is recursive enumerable, then we could build a Turing Machine T for it. We then make a new TM T'(w) = T(w1111w) such that T' accepts w when T cannot accept w1111w.
+
+Then T' should accept w when w is in diagonal language. But diagonal language is not RE, so there should be no T' or T. 
