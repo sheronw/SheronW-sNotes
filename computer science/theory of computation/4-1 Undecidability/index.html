@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
     
     
       
@@ -527,6 +527,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#recursive-recursively-enumerable" class="md-nav__link">
+    Recursive &amp; Recursively Enumerable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-language-thats-not-recursively-enumerable" class="md-nav__link">
     A language that's not recursively enumerable
   </a>
@@ -560,6 +567,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#a-language-thats-re-but-not-recursive" class="md-nav__link">
+    A language that's RE but not Recursive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#universal-language-is-re" class="md-nav__link">
+    Universal Language is RE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#universal-language-is-not-recursive" class="md-nav__link">
+    Universal Language is not Recursive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -568,6 +602,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4-2 More Undecidability Problems/" title="More Undecidability Problems" class="md-nav__link">
+      More Undecidability Problems
+    </a>
   </li>
 
         
@@ -926,6 +972,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#recursive-recursively-enumerable" class="md-nav__link">
+    Recursive &amp; Recursively Enumerable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-language-thats-not-recursively-enumerable" class="md-nav__link">
     A language that's not recursively enumerable
   </a>
@@ -950,6 +1003,33 @@
           <li class="md-nav__item">
   <a href="#l_d-is-not-recursively-enumerable" class="md-nav__link">
     L_d is not recursively enumerable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-language-thats-re-but-not-recursive" class="md-nav__link">
+    A language that's RE but not Recursive
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#universal-language-is-re" class="md-nav__link">
+    Universal Language is RE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#universal-language-is-not-recursive" class="md-nav__link">
+    Universal Language is not Recursive
   </a>
   
 </li>
@@ -984,8 +1064,18 @@
 </ul>
 <p>So we have to show some problems to be undecidable.</p>
 <p>i.e. Does this TM accept this input?</p>
+<h2 id="recursive-recursively-enumerable">Recursive &amp; Recursively Enumerable</h2>
+<p>A language L is <strong>recursive</strong> if L=L(M) for some Turing machine M such that:</p>
+<ul>
+<li>If w is in L, then M accepts and halts.</li>
+<li>If w is not in L, then M eventually halts, alghough it never enters an accepting state.</li>
+</ul>
+<p>If the language is <strong>recursive</strong> then it is accepted by a TM that always halts.(<strong>Decider</strong>)</p>
+<p>A language L is <strong>recursively enumerable</strong> if <script type="math/tex">L=L(M)</script> for some TM <script type="math/tex">M</script>, but necessary halts for all input. (<strong>Recognizer</strong>)</p>
+<p>Not RE &gt; RE &gt; R</p>
+<p>If a language is recursive, then its complement is also recursive.</p>
+<p>If a language and its complement are both recursively enumerable, then the langauge is recursive.</p>
 <h2 id="a-language-thats-not-recursively-enumerable">A language that's not recursively enumerable</h2>
-<p>A language L is recursively enumerable if <script type="math/tex">L=L(M)</script> for some TM <script type="math/tex">M</script>.</p>
 <h3 id="present-tm-as-a-binary-string">present TM as a binary string</h3>
 <ol>
 <li>Represent state <script type="math/tex">q_i</script> with <script type="math/tex">0^i</script>
@@ -1013,6 +1103,21 @@
 <p>If <script type="math/tex">w_i \in L_d</script>, then <script type="math/tex">M_i</script> should accepts <script type="math/tex">w_i</script>, but according to the def of <script type="math/tex">L_d</script>, <script type="math/tex">w_i</script> is not in <script type="math/tex">L_d</script>. Contradiction.</p>
 <p>If <script type="math/tex">w_i \notin L_d</script>, then <script type="math/tex">M_i</script> should not accepts <script type="math/tex">w_i</script>, but according to the def of <script type="math/tex">L_d</script>, <script type="math/tex">w_i</script> is in <script type="math/tex">L_d</script>. Contradiction.</p>
 <p>So M not exists. <script type="math/tex">L_d</script> is not recursively enumerable.</p>
+<h2 id="a-language-thats-re-but-not-recursive">A language that's RE but not Recursive</h2>
+<p>The universal language /(L_u/) is {m1111w | m is the encoding of a TM M and w is an input string and M accepts w}.</p>
+<h3 id="universal-language-is-re">Universal Language is RE</h3>
+<p>We need to build a TM for it. This TM has 3 tapes.</p>
+<ul>
+<li>1st tape: the string content m1111w</li>
+<li>2nd tape: one track for the current string w, the other track is the pointer of the current tape symbol(this tape is to simulate the TM m)</li>
+<li>3rd tape: to record the current state of TM m</li>
+</ul>
+<p>For the given string m1111w, first put it to 1st tape, then copy w to the 2nd tape and put the pointer to the start of the string. Then go back to 1st tape and read the start state then write to 3rd tape.</p>
+<p>Then, we check the current state on 3rd tape and check the next symbol on 2nd tape, then go back to 1st tape part m to see what should do next. We could go to a final state and halt if m accepts w.</p>
+<h3 id="universal-language-is-not-recursive">Universal Language is not Recursive</h3>
+<p>We will prove it by proving that the complement of universal language is not recursive enumerable.</p>
+<p>Suppose the complement of universal language is recursive enumerable, then we could build a Turing Machine T for it. We then make a new TM T'(w) = T(w1111w) such that T' accepts w when T cannot accept w1111w.</p>
+<p>Then T' should accept w when w is in diagonal language. But diagonal language is not RE, so there should be no T' or T. </p>
                 
                   
                 
@@ -1048,13 +1153,13 @@
           </a>
         
         
-          <a href="../../../excerpt/akayaakashiyaayakashino/" title="あかやあかしやあやかしの" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../4-2 More Undecidability Problems/" title="More Undecidability Problems" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                あかやあかしやあやかしの
+                More Undecidability Problems
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1082,7 +1187,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.8e03edeb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
