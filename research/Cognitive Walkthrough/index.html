@@ -863,6 +863,40 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#capturing-critical-information-during-the-evaluation" class="md-nav__link">
+    Capturing Critical Information During the Evaluation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-and-failure-stories" class="md-nav__link">
+    Success and Failure Stories
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-features-of-success" class="md-nav__link">
+    Common Features of Success
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-other-problems" class="md-nav__link">
+    Some Other Problems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -872,6 +906,26 @@
   <a href="#staying-on-track-and-general-fixes" class="md-nav__link">
     Staying on Track and General Fixes
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staying-on-track" class="md-nav__link">
+    Staying on Track
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-fixes" class="md-nav__link">
+    General Fixes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -969,6 +1023,40 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#capturing-critical-information-during-the-evaluation" class="md-nav__link">
+    Capturing Critical Information During the Evaluation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-and-failure-stories" class="md-nav__link">
+    Success and Failure Stories
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-features-of-success" class="md-nav__link">
+    Common Features of Success
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-other-problems" class="md-nav__link">
+    Some Other Problems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -978,6 +1066,26 @@
   <a href="#staying-on-track-and-general-fixes" class="md-nav__link">
     Staying on Track and General Fixes
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staying-on-track" class="md-nav__link">
+    Staying on Track
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-fixes" class="md-nav__link">
+    General Fixes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1004,18 +1112,84 @@
 <h2 id="detailed-description">Detailed  Description</h2>
 <p>Two phases:</p>
 <ul>
-<li>preparatory phase: define input such as tasks, action sequences, uer population, interface to be analysed</li>
+<li>preparatory phase: define input such as tasks, action sequences, user population, interface to be analyzed</li>
 <li>analysis phase: real work, i.e. walk through all actions of all tasks</li>
 </ul>
 <h3 id="define-inputs">Define Inputs</h3>
 <ol>
-<li>Who will be the users of the system?(specific background exprience or knowledge for both <strong>interface</strong> and <strong>task</strong>)</li>
+<li>Who will be the users of the system?(specific background experience or knowledge for both <strong>interface</strong> and <strong>task</strong>)</li>
 <li>What tasks will be analyzed?(should be concrete and realistic)</li>
 <li>What is the correct action sequence for each task and how is it described?(how the user is expected to view the task before learning the interface + a description of the sequence of actions that should accomplish the task with the current definition of the interface)</li>
 <li>How is the interface defined?(Description of prompts before every action)</li>
 </ol>
 <h3 id="walking-through-the-actions">Walking Through the Actions</h3>
+<p>Examining each action and attempting to tell a credible story about why users choose that action, based on assumptions about the user's background knowledge and goals, and on an understanding of the problem-solving process that enables a user to guess the correct action.</p>
+<p>heuristic 启发式（教学法） such as label-following</p>
+<p>critical features: connect goal description and action; connect action and feedback</p>
+<ol>
+<li>Will the users try to achieve the right effect?</li>
+<li>Will the user notice that the correct action is available?</li>
+<li>Will the user associate the correct action with the effect trying to be achieved?</li>
+<li>If the correct action is performed, will the user see that progress is being made toward solution of the task?</li>
+</ol>
+<h3 id="capturing-critical-information-during-the-evaluation">Capturing Critical Information During the Evaluation</h3>
+<p>User knowledge requirements, assumptions about the user population, notes about side issues and design changes, and the credible success story developed during the walkthrough.</p>
+<p>A possible practice: Divide these information into 3 groups, one for recording key points of group story, one for classes of users(population, prerequisite, what will be learn during performing tasks), one for side issues and design challenges(in detail if possible).</p>
+<h3 id="success-and-failure-stories">Success and Failure Stories</h3>
+<h4 id="common-features-of-success">Common Features of Success</h4>
+<p>Users May Know What Effect To Achieve</p>
+<ul>
+<li>it is part of their original task</li>
+<li>they have experience using a system</li>
+<li>the system tells them to do it</li>
+</ul>
+<p>User May Know An Action Is Available</p>
+<ul>
+<li>by experience</li>
+<li>seeing some device (button etc.)</li>
+<li>seeing a representation of an action (menu entry etc.)</li>
+</ul>
+<p>User May Know An Action Is Appropriate For The Effect They Are Trying To Achieve</p>
+<ul>
+<li>by experience</li>
+<li>the interface provides a prompt or label that connects the action to what they are trying to do</li>
+<li>all other actions look wrong</li>
+</ul>
+<p>User May Know Things Are Going OK After An Action</p>
+<ul>
+<li>by experience</li>
+<li>recognize a connection between a system response and what they were trying to do</li>
+</ul>
+<h4 id="some-other-problems">Some Other Problems</h4>
+<ul>
+<li>time limits</li>
+<li>physically difficult actions</li>
+<li>dropped <strong>terminator</strong> actions</li>
+</ul>
 <h2 id="staying-on-track-and-general-fixes">Staying on Track and General Fixes</h2>
+<h3 id="staying-on-track">Staying on Track</h3>
+<p>Cognitive Walkthrough only tells success story. If any issues generated in one of the actions of the sequence, just assume that the user takes the correct action, record the problem and go to next step.</p>
+<p>Also, users might learn new knowledge in previous actions</p>
+<h3 id="general-fixes">General Fixes</h3>
+<p>Will the user be trying to achieve the right effect?</p>
+<ul>
+<li>eliminate the action or change it to combinations of other action</li>
+<li>provide a prompt about which action to perform</li>
+<li>change parts of the task to get a better understanding</li>
+</ul>
+<p>Will the user know that the correct action is available?</p>
+<ul>
+<li>assign the action to a more obvious control</li>
+</ul>
+<p>Will the user know that the correct action will achieve the desired effect?</p>
+<ul>
+<li>labor-following,  assign labels that include words that users are likely to use when describing their tasks</li>
+</ul>
+<p>If the correct action is taken, will the user see that things are going OK?</p>
+<ul>
+<li>feedback that indicates <em>what</em> happened is better than feedback that just indicates that <em>something</em> happened</li>
+<li>use term or graphics that relate to the user's description for the task</li>
+</ul>
                 
                   
                 
