@@ -1,8 +1,4 @@
----
-title: Privacy & Human Behavior in the Age of Information笔记
-date: 2019-06-11 15:45:10
-categories: "研究笔记"
----
+# Privacy & Human Behavior in the Age of Information笔记
 
 论文原文出自SCIENCE VOL 347，以下为阅读笔记。
 
@@ -17,8 +13,6 @@ main content: empirical research on privacy behavior
 关于人们保护信息的能力与相关公共政策的讨论，如今有两种针锋相对的观点：第一种人认为人们能够根据自己的决策来保护好自己的信息隐私，过多的公共政策反而会干扰信息产业对人类带来的有益影响；另一种人认为，在日益复杂的信息世界中，人们很难权衡利弊、自行管理好自己的信息隐私，现有的一些工具已经不够用了，这个时候适当的公共政策与机构应该介入其中，从而抗衡商业团体和政府部门对于信息的收集与操纵。
 
 本文试图探讨一些影响人们作出信息隐私决策的因素，以及这些决策是如何导致保护或者违反信息隐私安全的行为的。
-
-<!--more-->  
 
 探讨的因素主要有三个：
 

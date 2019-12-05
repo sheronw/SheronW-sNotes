@@ -1,21 +1,6 @@
----
-title: Non-parametric Tests笔记
-date: 2019-06-25 12:43:35
-categories: "研究相关"
----
+# Non-parametric Tests
 
-ranking: make lowest value to be rank 1, seond lowest value to be rank 2... and then analysis
-
-procedure: 
-
-1.  carry out the analysis in R
-2.  how to interpret
-3.  how to report the results
-
-<!--more-->
-
-the Wilcoxon rank-sum test(Mann-Whitney test)
----------------------------------------------
+## the Wilcoxon rank-sum test(Mann-Whitney test)
 
 **comparing two independent conditions**
 

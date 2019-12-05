@@ -1,7 +1,4 @@
-﻿---
-title: Belmont Principles
-date: 2019-02-17 09:52:52
----
+# Belmont Principles
 
 Ethical Principles and Guidelines for the Protection of Human
 
