@@ -594,6 +594,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#rices-theorem-nothing-decidable" class="md-nav__link">
+    Rice's Theorem: Nothing Decidable
+  </a>
+  
+</li>
+      
       
       
       
@@ -611,8 +618,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../4-2 More Undecidability Problems/" title="More Undecidability Problems" class="md-nav__link">
-      More Undecidability Problems
+    <a href="../4-2 More Undecidability Problems/" title="4.2 More Undecidability Problems" class="md-nav__link">
+      4.2 More Undecidability Problems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5-1 Cook-Levin Theorem/" title="5.1 Cook-Levin Theorem" class="md-nav__link">
+      5.1 Cook-Levin Theorem
     </a>
   </li>
 
@@ -1051,6 +1070,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#rices-theorem-nothing-decidable" class="md-nav__link">
+    Rice's Theorem: Nothing Decidable
+  </a>
+  
+</li>
+      
       
       
       
@@ -1080,7 +1106,7 @@
 <p>A language L is <strong>recursive</strong> if L=L(M) for some Turing machine M such that:</p>
 <ul>
 <li>If w is in L, then M accepts and halts.</li>
-<li>If w is not in L, then M eventually halts, alghough it never enters an accepting state.</li>
+<li>If w is not in L, then M eventually halts, although it never enters an accepting state.</li>
 </ul>
 <p>If the language is <strong>recursive</strong> then it is accepted by a TM that always halts.(<strong>Decider</strong>)</p>
 <p>A language L is <strong>recursively enumerable</strong> if <script type="math/tex">L=L(M)</script> for some TM <script type="math/tex">M</script>, but necessary halts for all input. (<strong>Recognizer</strong>)</p>
@@ -1105,7 +1131,7 @@
 <p>The language <script type="math/tex">L_d</script>, the diagonalization language, is the set of strings <script type="math/tex">w_i</script> such that <script type="math/tex">w_i</script> is not in <script type="math/tex">L(M_i)</script>.</p>
 <p>Because we could write every TM as binary string and binary string is countable, so we could list all TMs as <script type="math/tex">M_1 \cdots M_i \cdots </script> whose code is <script type="math/tex">w_1 \cdots w_i \cdots </script>.</p>
 <p>Not all binary string could represent valid TM, of course. So we could consider them as TMs that accept no string including empty string.</p>
-<p>Then we could construct a table that could represend the characteristic vectors of each languages. Each row means a language and each column is a string, if accept then this cell is 1 and 0 otherwise.</p>
+<p>Then we could construct a table that could represented the characteristic vectors of each languages. Each row means a language and each column is a string, if accept then this cell is 1 and 0 otherwise.</p>
 <p>In order to construct <script type="math/tex">L_d</script>, we are using the same trick in discrete math. We could find the diagonal value of this table and flip them. For example, if in the table <script type="math/tex">M_i</script> accepts <script type="math/tex">w_i</script> then <script type="math/tex">w_i</script> is not in <script type="math/tex">L_d</script> .</p>
 <h3 id="l_d-is-not-recursively-enumerable">
 <script type="math/tex">L_d</script> is not recursively enumerable</h3>
@@ -1116,7 +1142,7 @@
 <p>If <script type="math/tex">w_i \notin L_d</script>, then <script type="math/tex">M_i</script> should not accepts <script type="math/tex">w_i</script>, but according to the def of <script type="math/tex">L_d</script>, <script type="math/tex">w_i</script> is in <script type="math/tex">L_d</script>. Contradiction.</p>
 <p>So M not exists. <script type="math/tex">L_d</script> is not recursively enumerable.</p>
 <h2 id="a-language-thats-re-but-not-recursive">A language that's RE but not Recursive</h2>
-<p>The universal language /(L_u/) is {m1111w | m is the encoding of a TM M and w is an input string and M accepts w}.</p>
+<p>The universal language <script type="math/tex">L_u</script> is {m1111w | m is the encoding of a TM M and w is an input string and M accepts w}.</p>
 <h3 id="universal-language-is-re">Universal Language is RE</h3>
 <p>We need to build a TM for it. This TM has 3 tapes.</p>
 <ul>
@@ -1130,6 +1156,30 @@
 <p>We will prove it by proving that the complement of universal language is not recursive enumerable.</p>
 <p>Suppose the complement of universal language is recursive enumerable, then we could build a Turing Machine T for it. We then make a new TM T'(w) = T(w1111w) such that T' accepts w when T cannot accept w1111w.</p>
 <p>Then T' should accept w when w is in diagonal language. But diagonal language is not RE, so there should be no T' or T. </p>
+<h2 id="rices-theorem-nothing-decidable">Rice's Theorem: Nothing Decidable</h2>
+<p><strong>Version 1</strong></p>
+<p>Let Q be any non-trivial property of recursively enumerable languages. Then Q is undecidable.</p>
+<p>We identify a <strong>property</strong> of a language with the set of TMs that accept the languages with this property. A non-trivial property is one that applies to some but not all languages.</p>
+<p><strong>Version 2</strong></p>
+<p>Let a be any set of TM. Let <script type="math/tex">\textbf{a*} = \{M |\text{ M is a TM that accepts the same languages as some TM in a }\}</script>
+</p>
+<p>Then if <script type="math/tex">a^*</script> is neither empty nor the set of all TM, then <script type="math/tex">a^*</script> must be undecidable.</p>
+<p><strong>Proof</strong></p>
+<p>Let Grumpy be the TM that doesn't accept any string.</p>
+<p>First assume <script type="math/tex">a^*</script> doesn't include Grumpy. It is clear that <script type="math/tex">a^*</script> isn't empty.</p>
+<p>Let <script type="math/tex">M^*</script> be any particular TM in <script type="math/tex">a^*</script>. We will use the decider of <script type="math/tex">a^*</script> to build a decider for <script type="math/tex">L_u</script>, as follows:</p>
+<p>Given any pair (M, w), build a new TM M', such that:</p>
+<p>
+<script type="math/tex; mode=display"> M'(x) = \begin{cases}
+  M^*(x) &\text{if M accepts w}\\
+  M(x) &\text{if M doesn't accept w}
+\end{cases}</script>
+</p>
+<ol>
+<li>If M cannot accept w, then <script type="math/tex">M'(w) = M(w)</script>, both M and M' cannot recognize and accept w. M' cannot accept any string that cannot accepted by M, so M' is equivalent to Grumpy and not in <script type="math/tex">a^*</script>. However, we assumed that <script type="math/tex">a^*</script> doesn't include Grumpy. Contradiction.</li>
+<li>If M does accept w, then <script type="math/tex">M'(w) = M^*(w)</script>, that is, M' could accept the same string as some <script type="math/tex">M^*</script> in <script type="math/tex">a^*</script>. So M' is in <script type="math/tex">a^*</script>.</li>
+</ol>
+<p>Then, a decider for <script type="math/tex">a^*</script> M' could only be <script type="math/tex">M*(x)</script>, which will decide if M accepts w. So it will decide universal language. So the decider of <script type="math/tex">a^*</script> is not exist and <script type="math/tex">a^*</script> is undecidable.</p>
                 
                   
                 
@@ -1165,13 +1215,13 @@
           </a>
         
         
-          <a href="../4-2 More Undecidability Problems/" title="More Undecidability Problems" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../4-2 More Undecidability Problems/" title="4.2 More Undecidability Problems" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                More Undecidability Problems
+                4.2 More Undecidability Problems
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
