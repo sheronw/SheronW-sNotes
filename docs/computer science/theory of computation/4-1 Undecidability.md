@@ -14,7 +14,7 @@ i.e. Does this TM accept this input?
 A language L is **recursive** if L=L(M) for some Turing machine M such that:
 
 - If w is in L, then M accepts and halts.
-- If w is not in L, then M eventually halts, alghough it never enters an accepting state.
+- If w is not in L, then M eventually halts, although it never enters an accepting state.
 
 If the language is **recursive** then it is accepted by a TM that always halts.(**Decider**)
 
@@ -46,7 +46,7 @@ Because we could write every TM as binary string and binary string is countable,
 
 Not all binary string could represent valid TM, of course. So we could consider them as TMs that accept no string including empty string.
 
-Then we could construct a table that could represend the characteristic vectors of each languages. Each row means a language and each column is a string, if accept then this cell is 1 and 0 otherwise.
+Then we could construct a table that could represented the characteristic vectors of each languages. Each row means a language and each column is a string, if accept then this cell is 1 and 0 otherwise.
 
 In order to construct \(L_d\), we are using the same trick in discrete math. We could find the diagonal value of this table and flip them. For example, if in the table \(M_i\) accepts \(w_i\) then \(w_i\) is not in \(L_d\) .
 
@@ -66,7 +66,7 @@ So M not exists. \(L_d\) is not recursively enumerable.
 
 ## A language that's RE but not Recursive
 
-The universal language /(L_u/) is {m1111w | m is the encoding of a TM M and w is an input string and M accepts w}.
+The universal language \(L_u\) is {m1111w | m is the encoding of a TM M and w is an input string and M accepts w}.
 
 ### Universal Language is RE
 
@@ -87,3 +87,37 @@ We will prove it by proving that the complement of universal language is not rec
 Suppose the complement of universal language is recursive enumerable, then we could build a Turing Machine T for it. We then make a new TM T'(w) = T(w1111w) such that T' accepts w when T cannot accept w1111w.
 
 Then T' should accept w when w is in diagonal language. But diagonal language is not RE, so there should be no T' or T. 
+
+## Rice's Theorem: Nothing Decidable
+
+**Version 1**
+
+Let Q be any non-trivial property of recursively enumerable languages. Then Q is undecidable.
+
+We identify a **property** of a language with the set of TMs that accept the languages with this property. A non-trivial property is one that applies to some but not all languages.
+
+**Version 2**
+
+Let a be any set of TM. Let \(\textbf{a*} = \{M |\text{ M is a TM that accepts the same languages as some TM in a }\}\)
+
+Then if \(a^*\) is neither empty nor the set of all TM, then \(a^*\) must be undecidable.
+
+**Proof**
+
+Let Grumpy be the TM that doesn't accept any string.
+
+First assume \(a^*\) doesn't include Grumpy. It is clear that \(a^*\) isn't empty.
+
+Let \(M^*\) be any particular TM in \(a^*\). We will use the decider of \(a^*\) to build a decider for \(L_u\), as follows:
+
+Given any pair (M, w), build a new TM M', such that:
+
+$$ M'(x) = \begin{cases}
+  M^*(x) &\text{if M accepts w}\\
+  M(x) &\text{if M doesn't accept w}
+\end{cases}$$
+
+1. If M cannot accept w, then \(M'(w) = M(w)\), both M and M' cannot recognize and accept w. M' cannot accept any string that cannot accepted by M, so M' is equivalent to Grumpy and not in \(a^*\). However, we assumed that \(a^*\) doesn't include Grumpy. Contradiction.
+2. If M does accept w, then \(M'(w) = M^*(w)\), that is, M' could accept the same string as some \(M^*\) in \(a^*\). So M' is in \(a^*\).
+
+Then, a decider for \(a^*\) M' could only be \(M*(x)\), which will decide if M accepts w. So it will decide universal language. So the decider of \(a^*\) is not exist and \(a^*\) is undecidable.
