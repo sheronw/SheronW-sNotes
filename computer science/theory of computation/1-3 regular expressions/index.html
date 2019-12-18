@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -50,7 +50,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -443,6 +443,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#properties-of-regular-language" class="md-nav__link">
+    Properties of Regular Language
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#formal-def-of-a-regular-expression" class="md-nav__link">
     Formal Def of a Regular Expression
   </a>
@@ -465,6 +472,20 @@
         <li class="md-nav__item">
   <a href="#equivalence-with-finite-automata" class="md-nav__link">
     Equivalence with Finite Automata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dfa-to-regular-expression" class="md-nav__link">
+    DFA to regular expression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pumping-lemma" class="md-nav__link">
+    Pumping Lemma
   </a>
   
 </li>
@@ -955,6 +976,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#properties-of-regular-language" class="md-nav__link">
+    Properties of Regular Language
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#formal-def-of-a-regular-expression" class="md-nav__link">
     Formal Def of a Regular Expression
   </a>
@@ -981,6 +1009,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dfa-to-regular-expression" class="md-nav__link">
+    DFA to regular expression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pumping-lemma" class="md-nav__link">
+    Pumping Lemma
+  </a>
+  
+</li>
+      
       
       
       
@@ -999,6 +1041,8 @@
                 
                 
                 <h1 id="13-regular-expressions">1.3 regular expressions</h1>
+<h2 id="properties-of-regular-language">Properties of Regular Language</h2>
+<p>Unions, intersections, differences and complements of regular languages are regular.</p>
 <h2 id="formal-def-of-a-regular-expression">Formal Def of a Regular Expression</h2>
 <p>Say that R is a regular expression if R is:
 - <script type="math/tex">a</script> for some <script type="math/tex">a</script> in the alphabet <script type="math/tex">\Sigma</script>
@@ -1030,8 +1074,27 @@
 <li>prove see textbook p67 p70</li>
 <li><strong>GNFA</strong>: generalized nondeterministic finite automation, its transition arrows may have any regular expression as labels</li>
 </ul>
+<h2 id="dfa-to-regular-expression">DFA to regular expression</h2>
+<p>
+<script type="math/tex; mode=display">R^k_{ij}=R^{k-1}_{ik}(R^{k-1}_{kk})^*R^{k-1}_{kj}</script>
+</p>
+<p>Write a table out.</p>
+<p>Colum: k=0,1,...n-1</p>
+<p>Row: all combination of two states</p>
+<p>Base Case: when k=0, if there is a transition(including this state and itself, in this case is <script type="math/tex">\varepsilon</script>), then is the combination(or+transitions if more than one); if there is not, then it is empty.</p>
+<p>Then fill the table using formula.</p>
+<p>The result should be <script type="math/tex">R^n_{start+accept}</script>
+</p>
+<h2 id="pumping-lemma">Pumping Lemma</h2>
+<p>Suppose it is regular. Let p be its pumping constant.</p>
+<p>Consider the string w=xxx, which is a string in this language with length greater than p.</p>
+<p>There must be a pumping decomposition of w: w=xyz, where <script type="math/tex">|xy| \leq p</script> and <script type="math/tex">|y|>0</script>.</p>
+<p>Prove this compositions variants is not in the language.</p>
+<p>Then this violates the pumping lemma.</p>
+<p>So it is not regular.</p>
                 
                   
+                
                 
               
               
@@ -1099,7 +1162,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       

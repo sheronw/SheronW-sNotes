@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -50,7 +50,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -441,6 +441,39 @@
   <a href="#equivalence-of-nfas-dfas" class="md-nav__link">
     Equivalence of NFAs &amp; DFAs
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convert-nfa-to-dfa" class="md-nav__link">
+    Convert NFA to DFA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#varepsilon-nfa" class="md-nav__link">
+    \varepsilon-NFA
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convert-varepsilon-nfa-to-dfa" class="md-nav__link">
+    Convert \varepsilon-NFA to DFA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -953,6 +986,39 @@
     Equivalence of NFAs &amp; DFAs
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convert-nfa-to-dfa" class="md-nav__link">
+    Convert NFA to DFA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#varepsilon-nfa" class="md-nav__link">
+    \varepsilon-NFA
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convert-varepsilon-nfa-to-dfa" class="md-nav__link">
+    Convert \varepsilon-NFA to DFA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -1009,8 +1075,19 @@
 <h2 id="equivalence-of-nfas-dfas">Equivalence of NFAs &amp; DFAs</h2>
 <p>Two machines are equivalent if they recognize the same language.</p>
 <p>Every nondeterministic finite automation has an equivalent deterministic finite automation.</p>
+<h3 id="convert-nfa-to-dfa">Convert NFA to DFA</h3>
+<p>From start state.</p>
+<p>For each state and each alphabet <em>a</em>, create a new state(the combination of all possible state using this character), and make <em>a</em> transition from this state to the new state.</p>
+<p>For the combination state, if any of the state inside of it has the certain transition, then it counts for the transition.</p>
+<h2 id="varepsilon-nfa">
+<script type="math/tex">\varepsilon-NFA</script>
+</h2>
+<h3 id="convert-varepsilon-nfa-to-dfa">Convert <script type="math/tex">\varepsilon-NFA</script> to DFA</h3>
+<p>First find the <script type="math/tex">\varepsilon</script> closure of start state.</p>
+<p>For each state, find the next state using the same method as NFA to DFA. But this state should be the combination of all states' <script type="math/tex">\varepsilon</script> closure.</p>
                 
                   
+                
                 
               
               
@@ -1078,7 +1155,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       

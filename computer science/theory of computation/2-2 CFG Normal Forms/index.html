@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -50,7 +50,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -1084,7 +1084,7 @@
 <p>Similarly, using a stack, go from S to terminal symbols, mark any symbol meets, then delete unmarked symbols.</p>
 <p>The sequence of 3 and 4 matters, if we remove unreachable then ungenerating, we will have some rules that has some symbol X on the left hand side that start state cannot go to(two states that has no connections). Because we could go to this X before we move all ungenerating rules, so it is left.</p>
 <h3 id="step-5-substitute-terminal-symbols">Step 5: Substitute terminal symbols.</h3>
-<p>For any grammar <script type="math/tex">A = X_1\cdots X_i\cdots X_n</script> where n&gt;1, if <script type="math/tex">X_i</script> is a terminal symbol, then we substitue <script type="math/tex">X_i</script> using <script type="math/tex">A_i</script> and add a new rule <script type="math/tex">A_i \Rightarrow X_i</script>.</p>
+<p>For any grammar <script type="math/tex">A = X_1\cdots X_i\cdots X_n</script> where <strong>n&gt;1</strong>, if <script type="math/tex">X_i</script> is a terminal symbol, then we substitue <script type="math/tex">X_i</script> using <script type="math/tex">A_i</script> and add a new rule <script type="math/tex">A_i \Rightarrow X_i</script>.</p>
 <h3 id="step-6-split-long-rules">Step 6: Split long rules.</h3>
 <p>For any grammar <script type="math/tex">A = X_1\cdots X_n</script> where n&gt;2, make a new set of rules:</p>
 <p>
@@ -1106,6 +1106,7 @@
 <p>So every context-free language has a CNF grammar that derives all of the language except {<script type="math/tex">\varepsilon</script>}.</p>
                 
                   
+                
                 
               
               
@@ -1173,7 +1174,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
