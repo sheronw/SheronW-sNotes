@@ -42,7 +42,7 @@ The sequence of 3 and 4 matters, if we remove unreachable then ungenerating, we 
 
 ### Step 5: Substitute terminal symbols.
 
-For any grammar \(A = X_1\cdots X_i\cdots X_n\) where n>1, if \(X_i\) is a terminal symbol, then we substitue \(X_i\) using \(A_i\) and add a new rule \(A_i \Rightarrow X_i\).
+For any grammar \(A = X_1\cdots X_i\cdots X_n\) where **n>1**, if \(X_i\) is a terminal symbol, then we substitue \(X_i\) using \(A_i\) and add a new rule \(A_i \Rightarrow X_i\).
 
 ### Step 6: Split long rules.
 
@@ -61,3 +61,4 @@ $$B_{n-2}\Rightarrow X_{n-1}X_n$$
 Where \(B_i\) are new nonterminal symbols.
 
 So every context-free language has a CNF grammar that derives all of the language except {\(\varepsilon\)}.
+

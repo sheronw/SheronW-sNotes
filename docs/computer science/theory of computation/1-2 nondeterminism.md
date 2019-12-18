@@ -26,3 +26,22 @@ Let N=(\(Q, \Sigma, \delta, q_0, F\)) be an NFA and \(w\) a string over the alph
 Two machines are equivalent if they recognize the same language.
 
 Every nondeterministic finite automation has an equivalent deterministic finite automation.
+
+### Convert NFA to DFA
+
+From start state.
+
+For each state and each alphabet *a*, create a new state(the combination of all possible state using this character), and make *a* transition from this state to the new state.
+
+For the combination state, if any of the state inside of it has the certain transition, then it counts for the transition.
+
+
+
+## \(\varepsilon-NFA\)
+
+### Convert \(\varepsilon-NFA\) to DFA
+
+First find the \(\varepsilon\) closure of start state.
+
+For each state, find the next state using the same method as NFA to DFA. But this state should be the combination of all states' \(\varepsilon\) closure.
+
