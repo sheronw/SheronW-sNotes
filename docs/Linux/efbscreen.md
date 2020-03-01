@@ -10,6 +10,7 @@
 1. 首先要用screen保持后台运行
 2. 将其后台化需要Ctrl+a、Ctrl+d
 3. 再次打开的话需要执行screen -ls命令，然后再screen -r XXXXX
+4. 将其停掉需要Ctrl+c、Ctrl+d
 
 `# 新建一个有名字的session`
 
