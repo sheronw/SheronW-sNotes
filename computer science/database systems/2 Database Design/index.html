@@ -36,7 +36,7 @@
     
     
       
-        <title>1 The Psychopathology of Everyday Things - SheronW's Notes</title>
+        <title>2 Database Design - SheronW's Notes</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#1-the-psychopathology-of-everyday-things" tabindex="0" class="md-skip">
+      <a href="#2-database-design" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                1 The Psychopathology of Everyday Things
+                2 Database Design
               
             </span>
           
@@ -228,10 +228,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Computer science
@@ -249,7 +251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/10%2C2%2C16%26Two%27s%20Complement%20Notation/" title="decimal,binary,hex,Two’s Complement Notation" class="md-nav__link">
+    <a href="../../10%2C2%2C16%26Two%27s%20Complement%20Notation/" title="decimal,binary,hex,Two’s Complement Notation" class="md-nav__link">
       decimal,binary,hex,Two’s Complement Notation
     </a>
   </li>
@@ -261,7 +263,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/bit_level_operators/" title="编程语言中的操作符" class="md-nav__link">
+    <a href="../../bit_level_operators/" title="编程语言中的操作符" class="md-nav__link">
       编程语言中的操作符
     </a>
   </li>
@@ -273,7 +275,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/chessAI/" title="Chess AI" class="md-nav__link">
+    <a href="../../chessAI/" title="Chess AI" class="md-nav__link">
       Chess AI
     </a>
   </li>
@@ -285,7 +287,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/float/" title="How to save floating point Numbers?" class="md-nav__link">
+    <a href="../../float/" title="How to save floating point Numbers?" class="md-nav__link">
       How to save floating point Numbers?
     </a>
   </li>
@@ -316,7 +318,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/C/Formatted-I-O-Line-Input-Scanf-C/" title="Formatted I/O, Line Input, Scanf - C" class="md-nav__link">
+    <a href="../../C/Formatted-I-O-Line-Input-Scanf-C/" title="Formatted I/O, Line Input, Scanf - C" class="md-nav__link">
       Formatted I/O, Line Input, Scanf - C
     </a>
   </li>
@@ -331,10 +333,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" checked>
     
     <label class="md-nav__link" for="nav-3-6">
       Database systems
@@ -352,7 +356,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/database%20systems/1%20Introduction%20%26%20Relational%20Models/" title="1 Introduction & Relational Model" class="md-nav__link">
+    <a href="../1%20Introduction%20%26%20Relational%20Models/" title="1 Introduction & Relational Model" class="md-nav__link">
       1 Introduction & Relational Model
     </a>
   </li>
@@ -362,11 +366,145 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../../computer%20science/database%20systems/2%20Database%20Design/" title="2 Database Design" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2 Database Design
+      </label>
+    
+    <a href="./" title="2 Database Design" class="md-nav__link md-nav__link--active">
       2 Database Design
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functional-dependencies" class="md-nav__link">
+    Functional Dependencies
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    definition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closure" class="md-nav__link">
+    closure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalization" class="md-nav__link">
+    Normalization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-we-need-normalization" class="md-nav__link">
+    why we need normalization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-normal-form-1nf" class="md-nav__link">
+    first normal form (1NF)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-normal-form-2nf" class="md-nav__link">
+    second normal form (2NF)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-normal-form-3nf" class="md-nav__link">
+    third normal form (3NF)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boyce-codd-normal-form-bcnf" class="md-nav__link">
+    Boyce Codd normal form (BCNF)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalization-procedure" class="md-nav__link">
+    normalization procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chase-test" class="md-nav__link">
+    chase test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forth-normal-form-4nf" class="md-nav__link">
+    forth normal form (4NF)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -400,7 +538,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/design%20patterns/01%20oop/" title="Object-Oriented Programming" class="md-nav__link">
+    <a href="../../design%20patterns/01%20oop/" title="Object-Oriented Programming" class="md-nav__link">
       Object-Oriented Programming
     </a>
   </li>
@@ -436,7 +574,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/1-1%20finite%20automata/" title="1.1 finite automata" class="md-nav__link">
+    <a href="../../theory%20of%20computation/1-1%20finite%20automata/" title="1.1 finite automata" class="md-nav__link">
       1.1 finite automata
     </a>
   </li>
@@ -448,7 +586,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/1-2%20nondeterminism/" title="1.2 nondeterminism" class="md-nav__link">
+    <a href="../../theory%20of%20computation/1-2%20nondeterminism/" title="1.2 nondeterminism" class="md-nav__link">
       1.2 nondeterminism
     </a>
   </li>
@@ -460,7 +598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/1-3%20regular%20expressions/" title="1.3 regular expressions" class="md-nav__link">
+    <a href="../../theory%20of%20computation/1-3%20regular%20expressions/" title="1.3 regular expressions" class="md-nav__link">
       1.3 regular expressions
     </a>
   </li>
@@ -472,7 +610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/2-1%20grammar/" title="2.1 Context-Free & PDA" class="md-nav__link">
+    <a href="../../theory%20of%20computation/2-1%20grammar/" title="2.1 Context-Free & PDA" class="md-nav__link">
       2.1 Context-Free & PDA
     </a>
   </li>
@@ -484,7 +622,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/2-2%20CFG%20Normal%20Forms/" title="2.2 Normal Forms for CFG" class="md-nav__link">
+    <a href="../../theory%20of%20computation/2-2%20CFG%20Normal%20Forms/" title="2.2 Normal Forms for CFG" class="md-nav__link">
       2.2 Normal Forms for CFG
     </a>
   </li>
@@ -496,7 +634,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/2-3%20Pumping%20Lemma/" title="2.3 Pumping Lemma for CFL" class="md-nav__link">
+    <a href="../../theory%20of%20computation/2-3%20Pumping%20Lemma/" title="2.3 Pumping Lemma for CFL" class="md-nav__link">
       2.3 Pumping Lemma for CFL
     </a>
   </li>
@@ -508,7 +646,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/2-4%20CFL%20properties/" title="2.4 CFL Properties" class="md-nav__link">
+    <a href="../../theory%20of%20computation/2-4%20CFL%20properties/" title="2.4 CFL Properties" class="md-nav__link">
       2.4 CFL Properties
     </a>
   </li>
@@ -520,7 +658,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/2-5%20Decision%20Algorithms/" title="2.5 Decision Algorithms" class="md-nav__link">
+    <a href="../../theory%20of%20computation/2-5%20Decision%20Algorithms/" title="2.5 Decision Algorithms" class="md-nav__link">
       2.5 Decision Algorithms
     </a>
   </li>
@@ -532,7 +670,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/3-1%20Begin%20Turing%20Machines/" title="3.1 Begin Turing Machines" class="md-nav__link">
+    <a href="../../theory%20of%20computation/3-1%20Begin%20Turing%20Machines/" title="3.1 Begin Turing Machines" class="md-nav__link">
       3.1 Begin Turing Machines
     </a>
   </li>
@@ -544,7 +682,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/4-1%20Undecidability/" title="4.1 Undecidability" class="md-nav__link">
+    <a href="../../theory%20of%20computation/4-1%20Undecidability/" title="4.1 Undecidability" class="md-nav__link">
       4.1 Undecidability
     </a>
   </li>
@@ -556,7 +694,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/4-2%20More%20Undecidability%20Problems/" title="4.2 More Undecidability Problems" class="md-nav__link">
+    <a href="../../theory%20of%20computation/4-2%20More%20Undecidability%20Problems/" title="4.2 More Undecidability Problems" class="md-nav__link">
       4.2 More Undecidability Problems
     </a>
   </li>
@@ -568,7 +706,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../computer%20science/theory%20of%20computation/5-1%20Cook-Levin%20Theorem/" title="5.1 Cook-Levin Theorem" class="md-nav__link">
+    <a href="../../theory%20of%20computation/5-1%20Cook-Levin%20Theorem/" title="5.1 Cook-Levin Theorem" class="md-nav__link">
       5.1 Cook-Levin Theorem
     </a>
   </li>
@@ -732,12 +870,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Reading notes
@@ -755,7 +891,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../toRead/" title="ToRead" class="md-nav__link">
+    <a href="../../../reading%20notes/toRead/" title="ToRead" class="md-nav__link">
       ToRead
     </a>
   </li>
@@ -765,12 +901,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
     
     <label class="md-nav__link" for="nav-7-2">
       The Psychology of Everyday Things
@@ -788,7 +922,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../0%20index/" title="0 The Psychology of Everyday Things" class="md-nav__link">
+    <a href="../../../reading%20notes/The%20Psychology%20of%20Everyday%20Things/0%20index/" title="0 The Psychology of Everyday Things" class="md-nav__link">
       0 The Psychology of Everyday Things
     </a>
   </li>
@@ -798,110 +932,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        1 The Psychopathology of Everyday Things
-      </label>
-    
-    <a href="./" title="1 The Psychopathology of Everyday Things" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../../reading%20notes/The%20Psychology%20of%20Everyday%20Things/1%20The%20Psychopathology%20of%20Everyday%20Things/" title="1 The Psychopathology of Everyday Things" class="md-nav__link">
       1 The Psychopathology of Everyday Things
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#visibility" class="md-nav__link">
-    可见性Visibility
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#affordance" class="md-nav__link">
-    功能可见性Affordance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concept-model" class="md-nav__link">
-    概念模型Concept Model
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    设计的准则
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    好的概念模型
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    确保可见性
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    映射的设计准则
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    反馈的设计准则
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -911,7 +946,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2%20The%20Psychology%20of%20Everyday%20Actions/" title="2 The Psychology of Everyday Actions" class="md-nav__link">
+    <a href="../../../reading%20notes/The%20Psychology%20of%20Everyday%20Things/2%20The%20Psychology%20of%20Everyday%20Actions/" title="2 The Psychology of Everyday Actions" class="md-nav__link">
       2 The Psychology of Everyday Actions
     </a>
   </li>
@@ -923,7 +958,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../3%20Knowledge%20in%20the%20Head%20and%20in%20the%20World/" title="3 Knowledge in the Head and in the World" class="md-nav__link">
+    <a href="../../../reading%20notes/The%20Psychology%20of%20Everyday%20Things/3%20Knowledge%20in%20the%20Head%20and%20in%20the%20World/" title="3 Knowledge in the Head and in the World" class="md-nav__link">
       3 Knowledge in the Head and in the World
     </a>
   </li>
@@ -935,7 +970,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../4%20Knowing%20What%20to%20Do/" title="4 Knowing What to Do" class="md-nav__link">
+    <a href="../../../reading%20notes/The%20Psychology%20of%20Everyday%20Things/4%20Knowing%20What%20to%20Do/" title="4 Knowing What to Do" class="md-nav__link">
       4 Knowing What to Do
     </a>
   </li>
@@ -947,7 +982,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../5%20To%20Err%20Is%20Human/" title="5 To Err Is Human" class="md-nav__link">
+    <a href="../../../reading%20notes/The%20Psychology%20of%20Everyday%20Things/5%20To%20Err%20Is%20Human/" title="5 To Err Is Human" class="md-nav__link">
       5 To Err Is Human
     </a>
   </li>
@@ -959,7 +994,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../6%20The%20Design%20Challenge/" title="6 The Design Challenge" class="md-nav__link">
+    <a href="../../../reading%20notes/The%20Psychology%20of%20Everyday%20Things/6%20The%20Design%20Challenge/" title="6 The Design Challenge" class="md-nav__link">
       6 The Design Challenge
     </a>
   </li>
@@ -971,7 +1006,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../7%20User-Centered%20Design/" title="7 User Centered Design" class="md-nav__link">
+    <a href="../../../reading%20notes/The%20Psychology%20of%20Everyday%20Things/7%20User-Centered%20Design/" title="7 User Centered Design" class="md-nav__link">
       7 User Centered Design
     </a>
   </li>
@@ -1092,65 +1127,100 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#visibility" class="md-nav__link">
-    可见性Visibility
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#affordance" class="md-nav__link">
-    功能可见性Affordance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concept-model" class="md-nav__link">
-    概念模型Concept Model
+  <a href="#functional-dependencies" class="md-nav__link">
+    Functional Dependencies
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    设计的准则
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    好的概念模型
+  <a href="#definition" class="md-nav__link">
+    definition
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    确保可见性
+  <a href="#properties" class="md-nav__link">
+    properties
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    映射的设计准则
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    反馈的设计准则
+  <a href="#closure" class="md-nav__link">
+    closure
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalization" class="md-nav__link">
+    Normalization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-we-need-normalization" class="md-nav__link">
+    why we need normalization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-normal-form-1nf" class="md-nav__link">
+    first normal form (1NF)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-normal-form-2nf" class="md-nav__link">
+    second normal form (2NF)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-normal-form-3nf" class="md-nav__link">
+    third normal form (3NF)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boyce-codd-normal-form-bcnf" class="md-nav__link">
+    Boyce Codd normal form (BCNF)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalization-procedure" class="md-nav__link">
+    normalization procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chase-test" class="md-nav__link">
+    chase test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forth-normal-form-4nf" class="md-nav__link">
+    forth normal form (4NF)
+  </a>
   
 </li>
         
@@ -1176,52 +1246,58 @@
               
                 
                 
-                <h1 id="1-the-psychopathology-of-everyday-things">1 The Psychopathology of Everyday Things</h1>
-<p>本章节讲述的是与「每天需要打交道的东西」相关的心理学。</p>
-<h2 id="visibility">可见性Visibility</h2>
-<p>首先是<strong>可见性</strong>（Visiblity）。毕竟想要让用户操作，就需要让用户看到可以操作的界面，进而理解可操作的部件和真正实现的功能之间的<strong>映射</strong>（mapping），让用户能够知道自己的这种操作会引发什么样的功能。操作之后还需要合理的反馈，让用户知道系统执行了这个功能。</p>
-<p>比如「开灯」这个生活中司空见惯的操作：</p>
+                <h1 id="2-database-design">2 Database Design</h1>
+<h2 id="functional-dependencies">Functional Dependencies</h2>
+<h3 id="definition">definition</h3>
+<p>Let <script type="math/tex">A_1, A_2, \cdots, A_k</script> and <script type="math/tex">B</script> be attributes of a relation <script type="math/tex">R</script>.</p>
+<p>B is <strong>functionally dependent</strong> on <script type="math/tex">\{A_1, A_2, \cdots, A_k\}</script>  if and only if whenever two tuples t and u agree on <script type="math/tex">A_1, A_2, \cdots, A_k</script> , they must also agree on B.</p>
+<p>Any attribute in R is functionally dependent on its superkey.</p>
+<p>For example, in relation Course(<u>DeptCode</u>, <u>CourseNumber</u>, Title, Description):</p>
+<p>Both Title and Description is functionally dependent on {DeptCode, CourseNumber}.</p>
+<h3 id="properties">properties</h3>
 <ul>
-<li>灯的开关是我们能够看到的（要是藏在哪个旮旯里就太糟糕了）</li>
-<li>按下开关这个动作我们知道是「让某个东西处于开启状态」的意思</li>
-<li>灯亮，这样我们就知道灯成功地被我们打开了</li>
+<li>Reflexivity. An attribute is always functionally dependent on itself.</li>
+<li>Augmentation. That is, if B is functionally dependent on A, B is functionally dependent on any superset of A.</li>
+<li>Transitivity. If B is functionally dependent on A and C is functionally dependent on B, then C is functionally dependent on A.</li>
+<li>Splitting rule. If a set of attributes A is functionally dependent on another set of attributes B. Then every element in A is functionally dependent on B.</li>
+<li>Combining rule. The opposite of Splitting rule.</li>
 </ul>
-<p>如果visibility太低，根本没有操作的线索，显然不是一件好事；而visibility太高，先不说美不美观，正常人看到几十个长得差不多的按钮排成一排，都会多少头皮发麻吧。</p>
-<h2 id="affordance">功能可见性Affordance</h2>
-<p>不管是出于什么样的原因，看到某些东西之后，我们下意识就会知道如何去操作——比如开关是用来按的，一个门上的拉手是用来拉的，而平板是用来推的，这个就是affordance。</p>
-<p>一个有趣的例子是，如果在火车站里面装玻璃，总有搞事情的人就把它给砸了，要是换成三合板，搞事情的人开始在上面乱涂乱画。</p>
-<p>而好的设计不要让用户有太多的想象空间——比如什么都没有的玻璃门，又简洁又美观，可我应该推它？拉它？左右滑动？上下滑动？（当然要是自动门就好了），affordance应该限制在一定程度之内。</p>
-<h2 id="concept-model">概念模型Concept Model</h2>
-<p>通过Visibility和Affordance，外加对于他们的一些限制，用户可以大概地推断出，不同的操作会引发什么不同的效果。</p>
-<p>当然用户从visilibility和affordance中推断出来的概念模型，很有可能和设计者所想的概念模型（也就是说实际的概念模型）有一定差别（届不到届不到QvQ）。好的设计应该尽量避免这种误差。</p>
-<h3 id="_1">设计的准则</h3>
-<h4 id="_2">好的概念模型</h4>
-<p>随着各种日常事物的复杂化，普通人已经很难掌握它们所有的机理了——就好比我现在正在用笔记本电脑，但我无法确切地明白电脑中的每一个精细部件的用途。因此他们的设计者需要一个抽象的概念模型，来让用户把操作和效果联系起来。</p>
-<p>——听上去像是把复杂的问题简单化，然而设计者和用户之间很容易在理解方面出现偏差，作者提到了一下几个概念：</p>
+<h3 id="closure">closure</h3>
+<p>Suppose <script type="math/tex">A=A_1, A_2, \cdots, A_m</script> is aset of attributes in a relation.</p>
+<p>S is a set of functional dependencies.</p>
+<p>The <strong>closure</strong> of A, A+ or <script type="math/tex">\{A_1, A_2, \cdots, A_m\}+</script> as the smallest superset of A, which includes all attributes which are functionally determined by the ones in A.</p>
+<h2 id="normalization">Normalization</h2>
+<blockquote>
+<p>Functional dependencies in a relation are removed by decomposing it into several smaller relations.</p>
+</blockquote>
+<h3 id="why-we-need-normalization">why we need normalization</h3>
+<p>relation anomalies because of different forms of redundancy in relations</p>
+<p>redundancy, update anomaly, deletion anomaly</p>
+<h3 id="first-normal-form-1nf">first normal form (1NF)</h3>
+<p>1NF has no multivalued attributes, that is, it is a flat file.</p>
+<p>All relations as we have defined them are in 1NF.</p>
+<h3 id="second-normal-form-2nf">second normal form (2NF)</h3>
+<p>2NF possesses <strong>key completeness</strong>, that is, every non-prime attribute(an attribute which is not part of a candidate key) depends on the entire primary key(not on a proper subset of it).</p>
+<h3 id="third-normal-form-3nf">third normal form (3NF)</h3>
+<p>For each nontrivial(Y is not a subset of X) functional dependency <script type="math/tex">X \Rightarrow Y</script>, either X is a superkey or Y contains no non-prime attributes.</p>
+<h3 id="boyce-codd-normal-form-bcnf">Boyce Codd normal form (BCNF)</h3>
+<p>For <strong>each</strong> nontribial functional dependency <script type="math/tex">X \Rightarrow Y</script>, X is a superkey.</p>
+<p>Every BCNF is also 2NF and 3NF.</p>
+<h3 id="normalization-procedure">normalization procedure</h3>
 <ol>
-<li>Design Model<strong>设计模型</strong>，即设计者所了解的概念模型</li>
-<li>User's Model<strong>用户模型</strong>，即用户通过系统的界面以及能够得到的信息所理解的概念模型</li>
-<li>System Image<strong>系统映像</strong>，即这个系统的客观存在的实际结构，比如我们所看到的按钮和显示屏</li>
+<li>let R(A) be a relation and A be its set of attributes</li>
+<li>Suppose R has a functional dependency <script type="math/tex">X \Rightarrow Y</script>, where X is not super key.</li>
+<li>Decompose R into two relationships: <script type="math/tex">R_1(X+)</script> and <script type="math/tex">R_2(X \cap (A-X+))</script>.</li>
+<li>Then apply this recursively to both <script type="math/tex">R_1</script> and <script type="math/tex">R_2</script>.</li>
 </ol>
-<p>其中，设计模型影响系统映像的形态，而用户通过与系统映像的交互不断修改脑中的用户模型。理想状态下，设计模型和用户模型应该是无限接近的。</p>
-<p>作者举了一个反例——他的冰箱有两个调温档，一个标签上写着「制冷」，另一个写着「保鲜」。用户很容易就会想当然地觉得一个用来调节制冷仓，另一个用来调节保鲜仓。</p>
-<p>然而设计者脑中的概念模型是这样的：「制冷」的调温档同时负责两个仓的制冷，而「保鲜」的调温档负责控制通向保鲜仓的冷气的多少。然而实际的系统映像就是照着设计者的想法制造的，用户在使用中就很容易出现问题。</p>
-<h4 id="_3">确保可见性</h4>
-<p>作者比对了（那个年代的）电话与汽车的设计。</p>
-<p>电话的许多功能都是通过那几个电话按键的排列组合（没有什么特殊的映射）实现的，比如_拨打#27实现某功能_，并且执行完毕之后没有任何提示。</p>
-<p>而汽车中的开关按钮都放在不同的位置，基本上一个开关对应一个功能，而且大部分功能都是可以立即看到反馈的，即使不能立即看到也有指示灯。</p>
-<p>正因为汽车的整个系统是可见的，所以用户能够更好地理解系统映像，并且进行相应的操作。而电话中可以控制的部分（那几个数字键）比能够实现的功能数量要少很多，很多功能是不可见的，就会让用户迷惑。</p>
-<h4 id="_4">映射的设计准则</h4>
-<p>之前有提到过，映射是操作和结果之间的联系。理想中的映射要顺其自然，才容易让用户理解，以下是几个例子：</p>
-<ul>
-<li>操作方向与结果的方向相同，比如方向盘这个东西，向左转的话车就左拐，反之亦然——要是方向盘向左车子向右，那还真是挑战人类极限。</li>
-<li>所控制的东西的顺序和按键的顺序相同，比如开关的排列顺序应该和灯的排列顺序相同。</li>
-<li>反馈的响度、亮度等和效果的程度成正比。</li>
-</ul>
-<p>虽然听上去很简单，但实际操作中还是很容易出错，比如音响设备中，调节声音从前后音箱中流出的比例时，滑块却是左右排列的——如何将滑块的左右映射到前后关系上，就很令人迷惑。</p>
-<h4 id="_5">反馈的设计准则</h4>
-<p>在现实中，虽然一些好的设计方案得以提出，但并没有得到普及，这里是作者的一个解释：在市场经济环境下，如果某方面的尝试在第一个产品推出之后并没有得到理想的反馈，几乎所有人都会放弃这个方向，因此许多原本有潜力的产品无法成功问世。</p>
-<p>作者还提到了科技发展对设计产生的影响是U字型的——一个新的事物面世是，受众群体往往比较小，操作也比较复杂；随着科技继续发展，操作会变得越来越简单易懂；然而从某个时间点开始，大量的新功能开始加入到这个事物中来，于是操作难度又再一次升高了。</p>
+<h3 id="chase-test">chase test</h3>
+<p>(example in lecture 11)</p>
+<p>general procedure for determining whether or not a given decomposition is lossless</p>
+<p>If we can reduce a row in the tableau to the original tuple, then the join is lossless.</p>
+<h3 id="forth-normal-form-4nf">forth normal form (4NF)</h3>
+<p><strong>multivaluted dependency</strong>: occurs when a relation has more than one independent, multivaluted attribute (A determines B and C, but B and C are independent)</p>
+<p>A 4NF relation means it is in BCNF and no multivalued dependencies.</p>
+<p>You could normalize a BCNF form R(A) with a multivalued dependency <script type="math/tex">X \Rightarrow Y</script> by decomposing R into <script type="math/tex">R_1(R-Y)</script> and <script type="math/tex">R_2(X\cap Y)</script>.</p>
                 
                   
                 
@@ -1243,7 +1319,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../0%20index/" title="0 The Psychology of Everyday Things" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1%20Introduction%20%26%20Relational%20Models/" title="1 Introduction & Relational Model" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1252,19 +1328,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                0 The Psychology of Everyday Things
+                1 Introduction & Relational Model
               </span>
             </div>
           </a>
         
         
-          <a href="../2%20The%20Psychology%20of%20Everyday%20Actions/" title="2 The Psychology of Everyday Actions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../design%20patterns/01%20oop/" title="Object-Oriented Programming" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2 The Psychology of Everyday Actions
+                Object-Oriented Programming
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
