@@ -12,7 +12,7 @@
 - many numbers of many-to-many relationships
 - introduced pointers
 - acyclic directed graph
-- records (vertice) and sets (edge)
+- records (vertices) and sets (edges)
 - several items with the same kind of records will use linked lists
 
 ### Relational Model
@@ -35,7 +35,7 @@
 ### Keys in Relational Model
 
 - <u>primary key</u>: one key that uniquely identify tuples in the relation
-- secondary key: any key whichis not primary
+- secondary key: any key which is not primary
 - superkey: any set of attributes which satisfies uniqueness condition
 - key: a minimal superkey, no proper subset of the key is a superkey
 
@@ -45,14 +45,14 @@
 
 #### set-level
 
-- $R \cap S$
-- $R \cup S$
-- $R-S$
-- $S-R$
+- $$R \cap S$$
+- $$R \cup S$$
+- $$R-S$$
+- $$S-R$$
 
 #### projection
 
-$\Pi_{A_1,A_2,\cdots,A_k}(R)$
+$$\Pi_{A_1,A_2,\cdots,A_k}(R)$$
 
 the relation obtained by selecting attributes from the relation and remove others
 
@@ -68,13 +68,13 @@ Let \(R(A_1, A_2, \cdots, A_m, B_1, B_2, \cdots, B_n)\) and \(S(A_1, A_2, \cdots
 
 Then the **natural join** of R and S \(R \Join S\) is:
 
-$\{(A_1, A_2, \cdots,A_m, B_1, B_2, \cdots, B_n, C_1, C_2, \cdots, C_k)\text{ | }\\(A_1, A_2, \cdots, A_m, B_1, B_2, \cdots, B_n)\text{ is a number of R and }\\(A_1, A_2, \cdots, A_m, C_1, C_2, \cdots, C_k)\text{ is a number of S}\}$
+$$\{(A_1, A_2, \cdots,A_m, B_1, B_2, \cdots, B_n, C_1, C_2, \cdots, C_k)\text{ | }\\(A_1, A_2, \cdots, A_m, B_1, B_2, \cdots, B_n)\text{ is a number of R and }\\(A_1, A_2, \cdots, A_m, C_1, C_2, \cdots, C_k)\text{ is a number of S}\}$$
 
 The **theta join** of R and S on condition C \(R \Join_C S\) is: the set of elements of the cartesian product which satisfy the join condition C.
 
 #### renaming
 
-$\rho_{S(A_1,A_2,\cdots,A_n)}(R)$
+$$\rho_{S(A_1,A_2,\cdots,A_n)}(R)$$
 
 rename R to S, with attributes rename to \(A_1, A_2, \cdots, A_n\).
 
@@ -96,31 +96,31 @@ Example: MAX(width)(Artworks)
 
 If R is a relation, then an expression using grouping is:
 
-$\gamma_{\text{grouping attributes, aggregation applied to groups} \rightarrow \text{name for created attribute}}(R)$
+$$\gamma_{\text{grouping attributes, aggregation applied to groups} \rightarrow \text{name for created attribute}}(R)$$
 
 Example:
 
-$\gamma_{\text{studentSSN, COUNT(CRN)} \rightarrow NumberOfCoursesTaken}(Enroll)$
+$$\gamma_{\text{studentSSN, COUNT(CRN)} \rightarrow NumberOfCoursesTaken}(Enroll)$$
 
 #### extended projection
 
 If R is a relation, then an expression using extended projection is:
 
-$\pi_{\text{grouping attributes, operation applied to groups} \rightarrow \text{name for created attribute}}(R)$
+$$\pi_{\text{grouping attributes, operation applied to groups} \rightarrow \text{name for created attribute}}(R)$$
 
 Example:
 
-$\pi_{\text{studentSSN, Score1+Score2} \rightarrow TotalScore}(Scores)$
+$$\pi_{\text{studentSSN, Score1+Score2} \rightarrow TotalScore}(Scores)$$
 
 #### sorting
 
-$\tau_{PrimarySortKey, SecondarySortKey}(R)$
+$$\tau_{PrimarySortKey, SecondarySortKey}(R)$$
 
 Ordered by primary sort key then secondary sort key and so on.
 
 #### outerjoin
 
-Sometimes there is no matching tuple for some tuples and they got disappeared in the joined relation. So outerjoin would keep themand leave the unmatched part a null value \(\perp\).
+Sometimes there is no matching tuple for some tuples and they got disappeared in the joined relation. So outerjoin would keep them leave the unmatched part a null value \(\perp\).
 
 For R and S:
 

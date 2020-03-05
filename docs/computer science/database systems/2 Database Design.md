@@ -56,7 +56,7 @@ For each nontrivial(Y is not a subset of X) functional dependency \(X \Rightarro
 
 ### Boyce Codd normal form (BCNF)
 
-For **each** nontribial functional dependency \(X \Rightarrow Y\), X is a superkey.
+For **each** nontrivial functional dependency \(X \Rightarrow Y\), X is a superkey.
 
 Every BCNF is also 2NF and 3NF.
 
@@ -77,8 +77,53 @@ If we can reduce a row in the tableau to the original tuple, then the join is lo
 
 ### forth normal form (4NF)
 
-**multivaluted dependency**: occurs when a relation has more than one independent, multivaluted attribute (A determines B and C, but B and C are independent)
+**multivalued dependency**: occurs when a relation has more than one independent, multivalued attribute (A determines B and C, but B and C are independent)
 
 A 4NF relation means it is in BCNF and no multivalued dependencies.
 
 You could normalize a BCNF form R(A) with a multivalued dependency \(X \Rightarrow Y\) by decomposing R into \(R_1(R-Y)\) and \(R_2(X\cap Y)\).
+
+## E-R Diagram to functional dependencies
+
+### relationships
+
+binary(many to many, one to many, one to one) or n-ary
+
+#### many-to-many
+
+attributes of the relationship and primary keys of the two related entity sets,with primary key combines the primary keys of the related entity sets
+
+*for a recursive many-to-many relationships:* rename the primary keys borrowed from the related entity sets, e.x. prereqDept, prereqNumber, seqDept, seqDept for the prerequisite relation.
+
+#### one-to-many
+
+combine two primary keys, or add the primary key to another entity set
+
+#### one-to-one
+
+when the two entity are mismatched and cannot join together, add primary key to the other entity
+
+or merge two into one relationship
+
+#### n-ary
+
+create a new relation: include primary key of each participating entity set, and attributes of the relationship become attributes of the relation
+
+#### multivalued attributes
+
+multiple tuples of primary key and owning entity
+
+or you could also create a new relationship
+
+#### weak entity sets
+
+copy all the needed key attributes from related entities (not only the entities within this relationship)
+
+### subclasses
+
+#### method 1
+
+- use one relation for superclass, one for subclasses
+- superclass has usual key and attributes
+- subclass has own non-inherited attributes and the key of superclass
+- problem: you have to search both tables to get full information
