@@ -497,6 +497,94 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#e-r-diagram-to-functional-dependencies" class="md-nav__link">
+    E-R Diagram to functional dependencies
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationships" class="md-nav__link">
+    relationships
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#many-to-many" class="md-nav__link">
+    many-to-many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-many" class="md-nav__link">
+    one-to-many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-one" class="md-nav__link">
+    one-to-one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n-ary" class="md-nav__link">
+    n-ary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multivalued-attributes" class="md-nav__link">
+    multivalued attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weak-entity-sets" class="md-nav__link">
+    weak entity sets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subclasses" class="md-nav__link">
+    subclasses
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1" class="md-nav__link">
+    method 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1229,6 +1317,94 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#e-r-diagram-to-functional-dependencies" class="md-nav__link">
+    E-R Diagram to functional dependencies
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationships" class="md-nav__link">
+    relationships
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#many-to-many" class="md-nav__link">
+    many-to-many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-many" class="md-nav__link">
+    one-to-many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-one" class="md-nav__link">
+    one-to-one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n-ary" class="md-nav__link">
+    n-ary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multivalued-attributes" class="md-nav__link">
+    multivalued attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weak-entity-sets" class="md-nav__link">
+    weak entity sets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subclasses" class="md-nav__link">
+    subclasses
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1" class="md-nav__link">
+    method 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1281,7 +1457,7 @@
 <h3 id="third-normal-form-3nf">third normal form (3NF)</h3>
 <p>For each nontrivial(Y is not a subset of X) functional dependency <script type="math/tex">X \Rightarrow Y</script>, either X is a superkey or Y contains no non-prime attributes.</p>
 <h3 id="boyce-codd-normal-form-bcnf">Boyce Codd normal form (BCNF)</h3>
-<p>For <strong>each</strong> nontribial functional dependency <script type="math/tex">X \Rightarrow Y</script>, X is a superkey.</p>
+<p>For <strong>each</strong> nontrivial functional dependency <script type="math/tex">X \Rightarrow Y</script>, X is a superkey.</p>
 <p>Every BCNF is also 2NF and 3NF.</p>
 <h3 id="normalization-procedure">normalization procedure</h3>
 <ol>
@@ -1295,9 +1471,35 @@
 <p>general procedure for determining whether or not a given decomposition is lossless</p>
 <p>If we can reduce a row in the tableau to the original tuple, then the join is lossless.</p>
 <h3 id="forth-normal-form-4nf">forth normal form (4NF)</h3>
-<p><strong>multivaluted dependency</strong>: occurs when a relation has more than one independent, multivaluted attribute (A determines B and C, but B and C are independent)</p>
+<p><strong>multivalued dependency</strong>: occurs when a relation has more than one independent, multivalued attribute (A determines B and C, but B and C are independent)</p>
 <p>A 4NF relation means it is in BCNF and no multivalued dependencies.</p>
 <p>You could normalize a BCNF form R(A) with a multivalued dependency <script type="math/tex">X \Rightarrow Y</script> by decomposing R into <script type="math/tex">R_1(R-Y)</script> and <script type="math/tex">R_2(X\cap Y)</script>.</p>
+<h2 id="e-r-diagram-to-functional-dependencies">E-R Diagram to functional dependencies</h2>
+<h3 id="relationships">relationships</h3>
+<p>binary(many to many, one to many, one to one) or n-ary</p>
+<h4 id="many-to-many">many-to-many</h4>
+<p>attributes of the relationship and primary keys of the two related entity sets,with primary key combines the primary keys of the related entity sets</p>
+<p><em>for a recursive many-to-many relationships:</em> rename the primary keys borrowed from the related entity sets, e.x. prereqDept, prereqNumber, seqDept, seqDept for the prerequisite relation.</p>
+<h4 id="one-to-many">one-to-many</h4>
+<p>combine two primary keys, or add the primary key to another entity set</p>
+<h4 id="one-to-one">one-to-one</h4>
+<p>when the two entity are mismatched and cannot join together, add primary key to the other entity</p>
+<p>or merge two into one relationship</p>
+<h4 id="n-ary">n-ary</h4>
+<p>create a new relation: include primary key of each participating entity set, and attributes of the relationship become attributes of the relation</p>
+<h4 id="multivalued-attributes">multivalued attributes</h4>
+<p>multiple tuples of primary key and owning entity</p>
+<p>or you could also create a new relationship</p>
+<h4 id="weak-entity-sets">weak entity sets</h4>
+<p>copy all the needed key attributes from related entities (not only the entities within this relationship)</p>
+<h3 id="subclasses">subclasses</h3>
+<h4 id="method-1">method 1</h4>
+<ul>
+<li>use one relation for superclass, one for subclasses</li>
+<li>superclass has usual key and attributes</li>
+<li>subclass has own non-inherited attributes and the key of superclass</li>
+<li>problem: you have to search both tables to get full information</li>
+</ul>
                 
                   
                 

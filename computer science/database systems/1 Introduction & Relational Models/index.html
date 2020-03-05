@@ -1406,7 +1406,7 @@
 <li>many numbers of many-to-many relationships</li>
 <li>introduced pointers</li>
 <li>acyclic directed graph</li>
-<li>records (vertice) and sets (edge)</li>
+<li>records (vertices) and sets (edges)</li>
 <li>several items with the same kind of records will use linked lists</li>
 </ul>
 <h3 id="relational-model">Relational Model</h3>
@@ -1428,7 +1428,7 @@
 <h3 id="keys-in-relational-model">Keys in Relational Model</h3>
 <ul>
 <li><u>primary key</u>: one key that uniquely identify tuples in the relation</li>
-<li>secondary key: any key whichis not primary</li>
+<li>secondary key: any key which is not primary</li>
 <li>superkey: any set of attributes which satisfies uniqueness condition</li>
 <li>key: a minimal superkey, no proper subset of the key is a superkey</li>
 </ul>
@@ -1436,13 +1436,23 @@
 <h3 id="ordinary-set-operations">ordinary set operations</h3>
 <h4 id="set-level">set-level</h4>
 <ul>
-<li>$R \cap S$</li>
-<li>$R \cup S$</li>
-<li>$R-S$</li>
-<li>$S-R$</li>
+<li>
+<script type="math/tex; mode=display">R \cap S</script>
+</li>
+<li>
+<script type="math/tex; mode=display">R \cup S</script>
+</li>
+<li>
+<script type="math/tex; mode=display">R-S</script>
+</li>
+<li>
+<script type="math/tex; mode=display">S-R</script>
+</li>
 </ul>
 <h4 id="projection">projection</h4>
-<p>$\Pi_{A_1,A_2,\cdots,A_k}(R)$</p>
+<p>
+<script type="math/tex; mode=display">\Pi_{A_1,A_2,\cdots,A_k}(R)</script>
+</p>
 <p>the relation obtained by selecting attributes from the relation and remove others</p>
 <h4 id="selection">selection</h4>
 <p>$\sigma_C(R)$</p>
@@ -1450,10 +1460,14 @@
 <h4 id="join">join</h4>
 <p>Let <script type="math/tex">R(A_1, A_2, \cdots, A_m, B_1, B_2, \cdots, B_n)</script> and <script type="math/tex">S(A_1, A_2, \cdots, A_m, C_1, C_2, \cdots, C_k)</script> be two relations that has some attributes in common.</p>
 <p>Then the <strong>natural join</strong> of R and S <script type="math/tex">R \Join S</script> is:</p>
-<p>${(A_1, A_2, \cdots,A_m, B_1, B_2, \cdots, B_n, C_1, C_2, \cdots, C_k)\text{ | }\(A_1, A_2, \cdots, A_m, B_1, B_2, \cdots, B_n)\text{ is a number of R and }\(A_1, A_2, \cdots, A_m, C_1, C_2, \cdots, C_k)\text{ is a number of S}}$</p>
+<p>
+<script type="math/tex; mode=display">\{(A_1, A_2, \cdots,A_m, B_1, B_2, \cdots, B_n, C_1, C_2, \cdots, C_k)\text{ | }\\(A_1, A_2, \cdots, A_m, B_1, B_2, \cdots, B_n)\text{ is a number of R and }\\(A_1, A_2, \cdots, A_m, C_1, C_2, \cdots, C_k)\text{ is a number of S}\}</script>
+</p>
 <p>The <strong>theta join</strong> of R and S on condition C <script type="math/tex">R \Join_C S</script> is: the set of elements of the cartesian product which satisfy the join condition C.</p>
 <h4 id="renaming">renaming</h4>
-<p>$\rho_{S(A_1,A_2,\cdots,A_n)}(R)$</p>
+<p>
+<script type="math/tex; mode=display">\rho_{S(A_1,A_2,\cdots,A_n)}(R)</script>
+</p>
 <p>rename R to S, with attributes rename to <script type="math/tex">A_1, A_2, \cdots, A_n</script>.</p>
 <h3 id="bags">bags</h3>
 <blockquote>
@@ -1466,19 +1480,29 @@
 <p>Example: MAX(width)(Artworks)</p>
 <h4 id="grouping">grouping</h4>
 <p>If R is a relation, then an expression using grouping is:</p>
-<p>$\gamma_{\text{grouping attributes, aggregation applied to groups} \rightarrow \text{name for created attribute}}(R)$</p>
+<p>
+<script type="math/tex; mode=display">\gamma_{\text{grouping attributes, aggregation applied to groups} \rightarrow \text{name for created attribute}}(R)</script>
+</p>
 <p>Example:</p>
-<p>$\gamma_{\text{studentSSN, COUNT(CRN)} \rightarrow NumberOfCoursesTaken}(Enroll)$</p>
+<p>
+<script type="math/tex; mode=display">\gamma_{\text{studentSSN, COUNT(CRN)} \rightarrow NumberOfCoursesTaken}(Enroll)</script>
+</p>
 <h4 id="extended-projection">extended projection</h4>
 <p>If R is a relation, then an expression using extended projection is:</p>
-<p>$\pi_{\text{grouping attributes, operation applied to groups} \rightarrow \text{name for created attribute}}(R)$</p>
+<p>
+<script type="math/tex; mode=display">\pi_{\text{grouping attributes, operation applied to groups} \rightarrow \text{name for created attribute}}(R)</script>
+</p>
 <p>Example:</p>
-<p>$\pi_{\text{studentSSN, Score1+Score2} \rightarrow TotalScore}(Scores)$</p>
+<p>
+<script type="math/tex; mode=display">\pi_{\text{studentSSN, Score1+Score2} \rightarrow TotalScore}(Scores)</script>
+</p>
 <h4 id="sorting">sorting</h4>
-<p>$\tau_{PrimarySortKey, SecondarySortKey}(R)$</p>
+<p>
+<script type="math/tex; mode=display">\tau_{PrimarySortKey, SecondarySortKey}(R)</script>
+</p>
 <p>Ordered by primary sort key then secondary sort key and so on.</p>
 <h4 id="outerjoin">outerjoin</h4>
-<p>Sometimes there is no matching tuple for some tuples and they got disappeared in the joined relation. So outerjoin would keep themand leave the unmatched part a null value <script type="math/tex">\perp</script>.</p>
+<p>Sometimes there is no matching tuple for some tuples and they got disappeared in the joined relation. So outerjoin would keep them leave the unmatched part a null value <script type="math/tex">\perp</script>.</p>
 <p>For R and S:</p>
 <ul>
 <li>in left outerjoin, only dangling tuples from R are added</li>
