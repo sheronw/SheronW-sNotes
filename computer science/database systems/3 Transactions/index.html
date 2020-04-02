@@ -36,7 +36,7 @@
     
     
       
-        <title>1.2 nondeterminism - SheronW's Notes</title>
+        <title>3 Transactions - SheronW's Notes</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#12-nondeterminism" tabindex="0" class="md-skip">
+      <a href="#3-transactions" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                1.2 nondeterminism
+                3 Transactions
               
             </span>
           
@@ -333,10 +333,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" checked>
     
     <label class="md-nav__link" for="nav-3-6">
       Database systems
@@ -354,7 +356,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../database%20systems/1%20Introduction%20%26%20Relational%20Models/" title="1 Introduction & Relational Model" class="md-nav__link">
+    <a href="../1%20Introduction%20%26%20Relational%20Models/" title="1 Introduction & Relational Model" class="md-nav__link">
       1 Introduction & Relational Model
     </a>
   </li>
@@ -366,7 +368,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../database%20systems/2%20Database%20Design/" title="2 Database Design" class="md-nav__link">
+    <a href="../2%20Database%20Design/" title="2 Database Design" class="md-nav__link">
       2 Database Design
     </a>
   </li>
@@ -376,11 +378,97 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../database%20systems/3%20Transactions/" title="3 Transactions" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3 Transactions
+      </label>
+    
+    <a href="./" title="3 Transactions" class="md-nav__link md-nav__link--active">
       3 Transactions
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fundamental-properties-of-transcactions" class="md-nav__link">
+    Fundamental Properties of Transcactions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atomicity" class="md-nav__link">
+    Atomicity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistency" class="md-nav__link">
+    Consistency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isolation" class="md-nav__link">
+    Isolation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#durability" class="md-nav__link">
+    Durability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-of-isolation-in-sql" class="md-nav__link">
+    Level of Isolation in SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transaction" class="md-nav__link">
+    Transaction
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -429,12 +517,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8">
     
     <label class="md-nav__link" for="nav-3-8">
       Theory of computation
@@ -452,7 +538,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../1-1%20finite%20automata/" title="1.1 finite automata" class="md-nav__link">
+    <a href="../../theory%20of%20computation/1-1%20finite%20automata/" title="1.1 finite automata" class="md-nav__link">
       1.1 finite automata
     </a>
   </li>
@@ -462,89 +548,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        1.2 nondeterminism
-      </label>
-    
-    <a href="./" title="1.2 nondeterminism" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../theory%20of%20computation/1-2%20nondeterminism/" title="1.2 nondeterminism" class="md-nav__link">
       1.2 nondeterminism
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#formal-def-of-nfa" class="md-nav__link">
-    Formal Def of NFA
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#equivalence-of-nfas-dfas" class="md-nav__link">
-    Equivalence of NFAs &amp; DFAs
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#convert-nfa-to-dfa" class="md-nav__link">
-    Convert NFA to DFA
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#varepsilon-nfa" class="md-nav__link">
-    \varepsilon-NFA
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#convert-varepsilon-nfa-to-dfa" class="md-nav__link">
-    Convert \varepsilon-NFA to DFA
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -554,7 +562,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../1-3%20regular%20expressions/" title="1.3 regular expressions" class="md-nav__link">
+    <a href="../../theory%20of%20computation/1-3%20regular%20expressions/" title="1.3 regular expressions" class="md-nav__link">
       1.3 regular expressions
     </a>
   </li>
@@ -566,7 +574,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-1%20grammar/" title="2.1 Context-Free & PDA" class="md-nav__link">
+    <a href="../../theory%20of%20computation/2-1%20grammar/" title="2.1 Context-Free & PDA" class="md-nav__link">
       2.1 Context-Free & PDA
     </a>
   </li>
@@ -578,7 +586,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-2%20CFG%20Normal%20Forms/" title="2.2 Normal Forms for CFG" class="md-nav__link">
+    <a href="../../theory%20of%20computation/2-2%20CFG%20Normal%20Forms/" title="2.2 Normal Forms for CFG" class="md-nav__link">
       2.2 Normal Forms for CFG
     </a>
   </li>
@@ -590,7 +598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-3%20Pumping%20Lemma/" title="2.3 Pumping Lemma for CFL" class="md-nav__link">
+    <a href="../../theory%20of%20computation/2-3%20Pumping%20Lemma/" title="2.3 Pumping Lemma for CFL" class="md-nav__link">
       2.3 Pumping Lemma for CFL
     </a>
   </li>
@@ -602,7 +610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-4%20CFL%20properties/" title="2.4 CFL Properties" class="md-nav__link">
+    <a href="../../theory%20of%20computation/2-4%20CFL%20properties/" title="2.4 CFL Properties" class="md-nav__link">
       2.4 CFL Properties
     </a>
   </li>
@@ -614,7 +622,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-5%20Decision%20Algorithms/" title="2.5 Decision Algorithms" class="md-nav__link">
+    <a href="../../theory%20of%20computation/2-5%20Decision%20Algorithms/" title="2.5 Decision Algorithms" class="md-nav__link">
       2.5 Decision Algorithms
     </a>
   </li>
@@ -626,7 +634,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../3-1%20Begin%20Turing%20Machines/" title="3.1 Begin Turing Machines" class="md-nav__link">
+    <a href="../../theory%20of%20computation/3-1%20Begin%20Turing%20Machines/" title="3.1 Begin Turing Machines" class="md-nav__link">
       3.1 Begin Turing Machines
     </a>
   </li>
@@ -638,7 +646,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../4-1%20Undecidability/" title="4.1 Undecidability" class="md-nav__link">
+    <a href="../../theory%20of%20computation/4-1%20Undecidability/" title="4.1 Undecidability" class="md-nav__link">
       4.1 Undecidability
     </a>
   </li>
@@ -650,7 +658,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../4-2%20More%20Undecidability%20Problems/" title="4.2 More Undecidability Problems" class="md-nav__link">
+    <a href="../../theory%20of%20computation/4-2%20More%20Undecidability%20Problems/" title="4.2 More Undecidability Problems" class="md-nav__link">
       4.2 More Undecidability Problems
     </a>
   </li>
@@ -662,7 +670,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../5-1%20Cook-Levin%20Theorem/" title="5.1 Cook-Levin Theorem" class="md-nav__link">
+    <a href="../../theory%20of%20computation/5-1%20Cook-Levin%20Theorem/" title="5.1 Cook-Levin Theorem" class="md-nav__link">
       5.1 Cook-Levin Theorem
     </a>
   </li>
@@ -1083,23 +1091,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#formal-def-of-nfa" class="md-nav__link">
-    Formal Def of NFA
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#equivalence-of-nfas-dfas" class="md-nav__link">
-    Equivalence of NFAs &amp; DFAs
+  <a href="#fundamental-properties-of-transcactions" class="md-nav__link">
+    Fundamental Properties of Transcactions
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#convert-nfa-to-dfa" class="md-nav__link">
-    Convert NFA to DFA
+  <a href="#atomicity" class="md-nav__link">
+    Atomicity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistency" class="md-nav__link">
+    Consistency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isolation" class="md-nav__link">
+    Isolation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#durability" class="md-nav__link">
+    Durability
   </a>
   
 </li>
@@ -1110,22 +1132,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#varepsilon-nfa" class="md-nav__link">
-    \varepsilon-NFA
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#convert-varepsilon-nfa-to-dfa" class="md-nav__link">
-    Convert \varepsilon-NFA to DFA
+  <a href="#level-of-isolation-in-sql" class="md-nav__link">
+    Level of Isolation in SQL
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#transaction" class="md-nav__link">
+    Transaction
+  </a>
   
 </li>
       
@@ -1146,53 +1162,46 @@
               
                 
                 
-                <h1 id="12-nondeterminism">1.2 nondeterminism</h1>
+                <h1 id="3-transactions">3 Transactions</h1>
+<h2 id="fundamental-properties-of-transcactions">Fundamental Properties of Transcactions</h2>
+<h3 id="atomicity">Atomicity</h3>
+<p>A transcation is the smallest dividable part in the operation. It cannot be performed partially.</p>
+<pre><code class="mysql">begin transaction;
+
+if(failure)
+    rollback transaction; // aborts
+
+commit transaction; // success
+</code></pre>
+
+<h3 id="consistency">Consistency</h3>
+<p>Transaction can only read or write an element that:</p>
 <ul>
-<li>Determinism(DFA) is a subset of nondeterminism(NFA).</li>
-<li>For each letter in DFA, it could only be on only one arrow.</li>
-<li>NFA may have <script type="math/tex">\varepsilon</script> on the arrow，means one or many arrows may exit from this state(zero).</li>
-<li>If a string in a branch is accepted, then NFA accepts the input string.</li>
+<li>got granted a lock on the element</li>
+<li>has not yet released the lock</li>
 </ul>
-<h2 id="formal-def-of-nfa">Formal Def of NFA</h2>
-<p>A nondeterministic finite automation is a 5-tuple(<script type="math/tex">Q, \Sigma, \delta, q_0, F</script>), where:</p>
+<p>All elements got locked must be later unlocked.</p>
+<h3 id="isolation">Isolation</h3>
+<p>Concurrently happened transactions have to run in isolation. They are always serializable.</p>
+<h3 id="durability">Durability</h3>
+<p>Values written or modified by committed transactions will remain committed, even in the face of system crashes or power outages.</p>
+<h2 id="level-of-isolation-in-sql">Level of Isolation in SQL</h2>
 <ul>
-<li>
-<script type="math/tex">Q</script> is a Finite set of states</li>
-<li>
-<script type="math/tex">\Sigma</script> is a finite alphabet</li>
-<li>
-<script type="math/tex">\delta : Q \times \Sigma_{\varepsilon} \rightarrow P(Q)</script> is the transition function</li>
-<li>
-<script type="math/tex">q_0 \in Q</script> is the start state</li>
-<li>
-<script type="math/tex">F \subseteq Q</script> is the set of accept states</li>
+<li>read uncommitted (totally happens at the same time)</li>
+<li>read committed (will read anything that commited instead of treate current transaction atomically)</li>
+<li>repeatable read (could treat single values but cannot treat large data such as a table)</li>
+<li>serialization (default)</li>
 </ul>
-<p>Formal Def of <strong>computation</strong> for an NFA:</p>
-<p>Let N=(<script type="math/tex">Q, \Sigma, \delta, q_0, F</script>) be an NFA and <script type="math/tex">w</script> a string over the alphabet <script type="math/tex">\Sigma</script>. Then we say that N asscepts <script type="math/tex">w</script> if we can write <script type="math/tex">w</script> as <script type="math/tex">w=y_1 y_2 \cdots y_m</script>, where each <script type="math/tex">y_i</script> is a member of <script type="math/tex">\Sigma_{\varepsilon}</script> and a sequence of states <script type="math/tex">r_0, r_1, \cdots, r_m</script> exists in <script type="math/tex">Q</script> with the following three conditions:</p>
+<h2 id="transaction">Transaction</h2>
 <ul>
-<li>
-<script type="math/tex">r_0 = q_0</script>
-</li>
-<li>
-<script type="math/tex">r_{i+1} \in \delta (r_i, y_{i+1}) \text{ , for } i=0, \cdots, m-1</script>
-</li>
-<li>
-<script type="math/tex">r_m \in F</script>
-</li>
+<li>the default mode in SQL</li>
+<li>Starts with <code>start transaction</code> statement</li>
+<li>Ends with <code>commit</code> or.<code>rollback</code> statement</li>
+<li>When user exits, transaction got committed.</li>
+<li><code>set autocommit on;</code> lets every operation treated as separate transaction and committed when completed</li>
+<li><code>set [global | session] transaction isolation level level</code></li>
+<li><code>start transaction read only;</code></li>
 </ul>
-<h2 id="equivalence-of-nfas-dfas">Equivalence of NFAs &amp; DFAs</h2>
-<p>Two machines are equivalent if they recognize the same language.</p>
-<p>Every nondeterministic finite automation has an equivalent deterministic finite automation.</p>
-<h3 id="convert-nfa-to-dfa">Convert NFA to DFA</h3>
-<p>From start state.</p>
-<p>For each state and each alphabet <em>a</em>, create a new state(the combination of all possible state using this character), and make <em>a</em> transition from this state to the new state.</p>
-<p>For the combination state, if any of the state inside of it has the certain transition, then it counts for the transition.</p>
-<h2 id="varepsilon-nfa">
-<script type="math/tex">\varepsilon-NFA</script>
-</h2>
-<h3 id="convert-varepsilon-nfa-to-dfa">Convert <script type="math/tex">\varepsilon-NFA</script> to DFA</h3>
-<p>First find the <script type="math/tex">\varepsilon</script> closure of start state.</p>
-<p>For each state, find the next state using the same method as NFA to DFA. But this state should be the combination of all states' <script type="math/tex">\varepsilon</script> closure.</p>
                 
                   
                 
@@ -1214,7 +1223,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1-1%20finite%20automata/" title="1.1 finite automata" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../2%20Database%20Design/" title="2 Database Design" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1223,19 +1232,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                1.1 finite automata
+                2 Database Design
               </span>
             </div>
           </a>
         
         
-          <a href="../1-3%20regular%20expressions/" title="1.3 regular expressions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../design%20patterns/01%20oop/" title="Object-Oriented Programming" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                1.3 regular expressions
+                Object-Oriented Programming
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
