@@ -64,7 +64,7 @@ Every BCNF is also 2NF and 3NF.
 
 1. let R(A) be a relation and A be its set of attributes
 2. Suppose R has a functional dependency \(X \Rightarrow Y\), where X is not super key.
-3. Decompose R into two relationships: \(R_1(X+)\) and \(R_2(X \cap (A-X+))\).
+3. Decompose R into two relationships: \(R_1(X+)\) and \(R_2(X \cup (A-X+))\).
 4. Then apply this recursively to both \(R_1\) and \(R_2\).
 
 ### chase test
