@@ -43,7 +43,7 @@ Values written or modified by committed transactions will remain committed, even
 
 - the default mode in SQL
 - Starts with `start transaction` statement
-- Ends with `commit` or.`rollback` statement
+- Ends with `commit` or `rollback` statement
 - When user exits, transaction got committed.
 - `set autocommit on;` lets every operation treated as separate transaction and committed when completed
 - `set [global | session] transaction isolation level level`
