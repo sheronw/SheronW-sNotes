@@ -35,5 +35,4 @@ jobs:
     - name: Webhook
       uses: joelwmale/webhook-action@master
       env:
-        WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-        data: "{'Value1': ${{ github.event.head_commit.message }}}"
+        WEBHOOK_URL: ${{ secrets.WEBHOOK_URL + "?value1=" + github.event.head_commit.message }}
