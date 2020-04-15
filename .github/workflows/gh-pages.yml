@@ -31,9 +31,11 @@ jobs:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./site     
-        
-    - name: Webhook
-      uses: joelwmale/webhook-action@master
-      env:
-        WEBHOOK_URL: '${{ secrets.WEBHOOK_URL }}?value1=${{github.event.head_commit.message}}'
-        data: "send commit message"
+          
+    - name: Webhook POST Action
+      uses: muinmomin/webhook-action@v1.0.0
+      with:
+        # URL of webhook to send post request to
+        url: ${{ secrets.WEBHOOK_URL }}
+        # JSON string of data to pass into request
+        data: '{"value1": "${{github.event.head_commit.message}}", "value2": "xxx"}'
