@@ -30,4 +30,10 @@ jobs:
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./site
+        PUBLISH_DIR: ./site     
+        
+    - name: Webhook
+      uses: joelwmale/webhook-action@master
+      env:
+        WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+        data: "{'value1': github.event.head_commit.message}"
