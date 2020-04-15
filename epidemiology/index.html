@@ -203,6 +203,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#life-expectation" class="md-nav__link">
+    life expectation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling" class="md-nav__link">
+    Modeling
+  </a>
+  
+    <nav class="md-nav" aria-label="Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sir-model" class="md-nav__link">
+    SIR  Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seir-model" class="md-nav__link">
+    SEIR Model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -703,6 +737,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../excerpt/stylePeriods/" title="Three Style Periods of the Common Practice Era" class="md-nav__link">
+      Three Style Periods of the Common Practice Era
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1118,6 +1164,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#life-expectation" class="md-nav__link">
+    life expectation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling" class="md-nav__link">
+    Modeling
+  </a>
+  
+    <nav class="md-nav" aria-label="Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sir-model" class="md-nav__link">
+    SIR  Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seir-model" class="md-nav__link">
+    SEIR Model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1144,9 +1224,50 @@
 <p>prevalence depends on incidence rate and duration: </p>
 <p>$P/(1-P) \approx IR \times D$</p>
 <p><strong>incidence</strong>: number of new cases/population size at risk</p>
-<p><strong>case-fatality ratio</strong>: the percent of people with the condition who die in a time period (death/cases)</p>
+<p><strong>case-fatality ratio(CFR)</strong>: the percent of people with the condition who die in a time period (death/cases)</p>
 <p><strong>age-adjusted death rate</strong>:</p>
 <p>$\sum_{\text{age group}} age \% \times \text{CFR by age}$</p>
+<h2 id="life-expectation">life expectation</h2>
+<p>$(\sum_{eachAgeGroup} death \times midpoint)/total$</p>
+<p>Sometimes there is no midpoint and we will use the upper bound of each age group.</p>
+<p><strong>disability-adjusted life year(DALY):</strong> the day you could live times your life quality (from 0 to 1)</p>
+<p>When there will be multi-possible outcomes, use:</p>
+<p>$\sum \text{the day you could live} \times quality \times possibility$</p>
+<p><strong>potential years of life lost(PYLL):</strong> </p>
+<p>$\sum_{eachAgeGroup}  \times CFR \times lifeExpectation \times confirmedCase\%$</p>
+<h2 id="modeling">Modeling</h2>
+<p>R0 - the number of people that one person could spread to</p>
+<p>We could reduce R0 by:</p>
+<ul>
+<li>vaccinating and reduce the number of people who are susceptible</li>
+<li>quaranting, to reduce transmission (or culling animals)</li>
+</ul>
+<h3 id="sir-model">SIR  Model</h3>
+<ul>
+<li>susceptible</li>
+<li>infected</li>
+<li>Recovered or removed</li>
+</ul>
+<p>S + I + R = 1</p>
+<p>Given transmission rate <script type="math/tex">\beta</script> and recovery rate <script type="math/tex">\gamma</script>:</p>
+<p>$\delta S(t)/\delta t = -\beta S(t)I(t)$</p>
+<p>$\delta R/ \delta t = \gamma I$</p>
+<p>$\delta I / \delta t = \beta SI - \gamma I$</p>
+<p>$R_0 = \beta / \gamma$</p>
+<h3 id="seir-model">SEIR Model</h3>
+<ul>
+<li>susceptible</li>
+<li>exposed</li>
+<li>infected</li>
+<li>recovered</li>
+</ul>
+<p>Or, you have to add births, deaths, migration or carriers of a disease.</p>
+<p>To stop an epidemic, we need R0&lt;1.</p>
+<p>$S&lt; \gamma \beta$</p>
+<ul>
+<li>make S small by vaccinating</li>
+<li>make <script type="math/tex">\beta</script> small by washing hands or social distancing</li>
+</ul>
                 
               
               
