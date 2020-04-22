@@ -16,6 +16,6 @@ $$L_e = \{w |\text{ w is the encoding of a TM that accepts no strings }\}$$
 
 $$L_{ne} = \{w |\text{ w is the encoding of a TM that accepts at least one string }\}$$
 
-(L_{ne}) is recursively enumerable but not recursive.
+\(L_{ne}\) is recursively enumerable but not recursive.
 \(L_e\) is not even recursively enumerable.
 

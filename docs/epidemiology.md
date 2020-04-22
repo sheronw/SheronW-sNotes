@@ -14,7 +14,7 @@
 
 prevalence depends on incidence rate and duration: 
 
-$P/(1-P) \approx IR \times D$
+$$P/(1-P) \approx IR \times D$$
 
 **incidence**: number of new cases/population size at risk
 
@@ -22,11 +22,11 @@ $P/(1-P) \approx IR \times D$
 
 **age-adjusted death rate**:
 
-$\sum_{\text{age group}} age \% \times \text{CFR by age}$
+$$\sum_{\text{age group}} age \% \times \text{CFR by age}$$
 
 ## life expectation
 
-$(\sum_{eachAgeGroup} death \times midpoint)/total$
+$$(\sum_{eachAgeGroup} death \times midpoint)/total$$
 
 Sometimes there is no midpoint and we will use the upper bound of each age group.
 
@@ -34,11 +34,11 @@ Sometimes there is no midpoint and we will use the upper bound of each age group
 
 When there will be multi-possible outcomes, use:
 
-$\sum \text{the day you could live} \times quality \times possibility$
+$$\sum \text{the day you could live} \times quality \times possibility$$
 
 **potential years of life lost(PYLL):** 
 
-$\sum_{eachAgeGroup}  \times CFR \times lifeExpectation \times confirmedCase\%$
+$$\sum_{eachAgeGroup}  \times CFR \times lifeExpectation \times confirmedCase\%$$
 
 ##Modeling
 
@@ -59,13 +59,13 @@ S + I + R = 1
 
 Given transmission rate \(\beta\) and recovery rate \(\gamma\):
 
-$\delta S(t)/\delta t = -\beta S(t)I(t)$
+$$\delta S(t)/\delta t = -\beta S(t)I(t)$$
 
-$\delta R/ \delta t = \gamma I$
+$$\delta R/ \delta t = \gamma I$$
 
-$\delta I / \delta t = \beta SI - \gamma I$
+$$\delta I / \delta t = \beta SI - \gamma I$$
 
-$R_0 = \beta / \gamma$
+$$R_0 = \beta / \gamma$$
 
 ### SEIR Model
 
@@ -78,17 +78,17 @@ Or, you have to add births, deaths, migration or carriers of a disease.
 
 After adding death parameter \(\mu\) =birth parameter \(\nu\), where \(\rho\) is the death possibility of the disease:
 
-$\delta S(t)/\delta t = \nu -\beta S(t)I(t) - \mu S$
+$$\delta S(t)/\delta t = \nu -\beta S(t)I(t) - \mu S$$
 
-$\delta R/ \delta t = (1-r)\gamma I - \mu R$
+$$\delta R/ \delta t = (1-r)\gamma I - \mu R$$
 
-$\delta I / \delta t = \beta SI - (\gamma+\mu)/(1-r) I$
+$$\delta I / \delta t = \beta SI - (\gamma+\mu)/(1-r) I$$
 
-$R_0 = \beta(1- \rho)\nu/(\mu + \gamma)\mu$
+$$R_0 = \beta(1- \rho)\nu/(\mu + \gamma)\mu$$
 
 To stop an epidemic, we need R0<1.
 
-$S< \gamma \beta$
+$$S< \gamma \beta$$
 
 - make S small by vaccinating
 - make \(\beta\) small by washing hands or social distancing
@@ -98,7 +98,7 @@ $S< \gamma \beta$
 
 **herd immunity**: we only need to vaccinate a portion of people to eradicate an infection, the portion is:
 
-$p_c = 1-1/R_0$
+$$p_c = 1-1/R_0$$
 
 ## periods
 
