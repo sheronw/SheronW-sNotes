@@ -1250,19 +1250,29 @@
 <p><strong>incidence &amp; prevalence</strong>: Thinking about a tank of prevalent cases, then the incident cases shoud come in while dealth or recovery should come out.</p>
 <p><strong>prevalence</strong>: number with the disease/population size</p>
 <p>prevalence depends on incidence rate and duration: </p>
-<p>$P/(1-P) \approx IR \times D$</p>
+<p>
+<script type="math/tex; mode=display">P/(1-P) \approx IR \times D</script>
+</p>
 <p><strong>incidence</strong>: number of new cases/population size at risk</p>
 <p><strong>case-fatality ratio(CFR)</strong>: the percent of people with the condition who die in a time period (death/cases)</p>
 <p><strong>age-adjusted death rate</strong>:</p>
-<p>$\sum_{\text{age group}} age \% \times \text{CFR by age}$</p>
+<p>
+<script type="math/tex; mode=display">\sum_{\text{age group}} age \% \times \text{CFR by age}</script>
+</p>
 <h2 id="life-expectation">life expectation</h2>
-<p>$(\sum_{eachAgeGroup} death \times midpoint)/total$</p>
+<p>
+<script type="math/tex; mode=display">(\sum_{eachAgeGroup} death \times midpoint)/total</script>
+</p>
 <p>Sometimes there is no midpoint and we will use the upper bound of each age group.</p>
 <p><strong>disability-adjusted life year(DALY):</strong> the day you could live times your life quality (from 0 to 1)</p>
 <p>When there will be multi-possible outcomes, use:</p>
-<p>$\sum \text{the day you could live} \times quality \times possibility$</p>
+<p>
+<script type="math/tex; mode=display">\sum \text{the day you could live} \times quality \times possibility</script>
+</p>
 <p><strong>potential years of life lost(PYLL):</strong> </p>
-<p>$\sum_{eachAgeGroup}  \times CFR \times lifeExpectation \times confirmedCase\%$</p>
+<p>
+<script type="math/tex; mode=display">\sum_{eachAgeGroup}  \times CFR \times lifeExpectation \times confirmedCase\%</script>
+</p>
 <h2 id="modeling">Modeling</h2>
 <p>R0 - the number of people that one person could spread to</p>
 <p>We could reduce R0 by:</p>
@@ -1278,10 +1288,18 @@
 </ul>
 <p>S + I + R = 1</p>
 <p>Given transmission rate <script type="math/tex">\beta</script> and recovery rate <script type="math/tex">\gamma</script>:</p>
-<p>$\delta S(t)/\delta t = -\beta S(t)I(t)$</p>
-<p>$\delta R/ \delta t = \gamma I$</p>
-<p>$\delta I / \delta t = \beta SI - \gamma I$</p>
-<p>$R_0 = \beta / \gamma$</p>
+<p>
+<script type="math/tex; mode=display">\delta S(t)/\delta t = -\beta S(t)I(t)</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\delta R/ \delta t = \gamma I</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\delta I / \delta t = \beta SI - \gamma I</script>
+</p>
+<p>
+<script type="math/tex; mode=display">R_0 = \beta / \gamma</script>
+</p>
 <h3 id="seir-model">SEIR Model</h3>
 <ul>
 <li>susceptible</li>
@@ -1291,12 +1309,22 @@
 </ul>
 <p>Or, you have to add births, deaths, migration or carriers of a disease.</p>
 <p>After adding death parameter <script type="math/tex">\mu</script> =birth parameter <script type="math/tex">\nu</script>, where <script type="math/tex">\rho</script> is the death possibility of the disease:</p>
-<p>$\delta S(t)/\delta t = \nu -\beta S(t)I(t) - \mu S$</p>
-<p>$\delta R/ \delta t = (1-r)\gamma I - \mu R$</p>
-<p>$\delta I / \delta t = \beta SI - (\gamma+\mu)/(1-r) I$</p>
-<p>$R_0 = \beta(1- \rho)\nu/(\mu + \gamma)\mu$</p>
+<p>
+<script type="math/tex; mode=display">\delta S(t)/\delta t = \nu -\beta S(t)I(t) - \mu S</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\delta R/ \delta t = (1-r)\gamma I - \mu R</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\delta I / \delta t = \beta SI - (\gamma+\mu)/(1-r) I</script>
+</p>
+<p>
+<script type="math/tex; mode=display">R_0 = \beta(1- \rho)\nu/(\mu + \gamma)\mu</script>
+</p>
 <p>To stop an epidemic, we need R0&lt;1.</p>
-<p>$S&lt; \gamma \beta$</p>
+<p>
+<script type="math/tex; mode=display">S< \gamma \beta</script>
+</p>
 <ul>
 <li>make S small by vaccinating</li>
 <li>make <script type="math/tex">\beta</script> small by washing hands or social distancing</li>
@@ -1304,7 +1332,9 @@
 </ul>
 <h2 id="vaccination">Vaccination</h2>
 <p><strong>herd immunity</strong>: we only need to vaccinate a portion of people to eradicate an infection, the portion is:</p>
-<p>$p_c = 1-1/R_0$</p>
+<p>
+<script type="math/tex; mode=display">p_c = 1-1/R_0</script>
+</p>
 <h2 id="periods">periods</h2>
 <p><strong>incubation period</strong>: the time between infection and onset of clinical disease/symptoms</p>
 <p><strong>latent period</strong>: time between infection and becoming infectious</p>
