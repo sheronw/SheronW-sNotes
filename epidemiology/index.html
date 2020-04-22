@@ -11,7 +11,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.1">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.89dc9fe3.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a676eddb.min.css">
       
       
     
@@ -234,6 +234,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vaccination" class="md-nav__link">
+    Vaccination
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#periods" class="md-nav__link">
+    periods
+  </a>
   
 </li>
       
@@ -1198,6 +1212,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vaccination" class="md-nav__link">
+    Vaccination
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#periods" class="md-nav__link">
+    periods
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1257,17 +1285,29 @@
 <h3 id="seir-model">SEIR Model</h3>
 <ul>
 <li>susceptible</li>
-<li>exposed</li>
+<li><strong>exposed</strong></li>
 <li>infected</li>
 <li>recovered</li>
 </ul>
 <p>Or, you have to add births, deaths, migration or carriers of a disease.</p>
+<p>After adding death parameter <script type="math/tex">\mu</script> =birth parameter <script type="math/tex">\nu</script>, where <script type="math/tex">\rho</script> is the death possibility of the disease:</p>
+<p>$\delta S(t)/\delta t = \nu -\beta S(t)I(t) - \mu S$</p>
+<p>$\delta R/ \delta t = (1-r)\gamma I - \mu R$</p>
+<p>$\delta I / \delta t = \beta SI - (\gamma+\mu)/(1-r) I$</p>
+<p>$R_0 = \beta(1- \rho)\nu/(\mu + \gamma)\mu$</p>
 <p>To stop an epidemic, we need R0&lt;1.</p>
 <p>$S&lt; \gamma \beta$</p>
 <ul>
 <li>make S small by vaccinating</li>
 <li>make <script type="math/tex">\beta</script> small by washing hands or social distancing</li>
+<li>make<script type="math/tex">\gamma</script> large by quarantine(shorten<script type="math/tex">1/\gamma</script>)</li>
 </ul>
+<h2 id="vaccination">Vaccination</h2>
+<p><strong>herd immunity</strong>: we only need to vaccinate a portion of people to eradicate an infection, the portion is:</p>
+<p>$p_c = 1-1/R_0$</p>
+<h2 id="periods">periods</h2>
+<p><strong>incubation period</strong>: the time between infection and onset of clinical disease/symptoms</p>
+<p><strong>latent period</strong>: time between infection and becoming infectious</p>
                 
               
               
@@ -1334,15 +1374,15 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.36cbf620.min.js"></script>
-      <script src="../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.c51dfa35.min.js"></script>
+      <script src="../assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.7f7c8775.min.js"
+            worker: "../assets/javascripts/worker/search.58d22e8e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
