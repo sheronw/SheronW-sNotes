@@ -70,11 +70,21 @@ $R_0 = \beta / \gamma$
 ### SEIR Model
 
 - susceptible
-- exposed
+- **exposed**
 - infected
 - recovered
 
 Or, you have to add births, deaths, migration or carriers of a disease.
+
+After adding death parameter \(\mu\) =birth parameter \(\nu\), where \(\rho\) is the death possibility of the disease:
+
+$\delta S(t)/\delta t = \nu -\beta S(t)I(t) - \mu S$
+
+$\delta R/ \delta t = (1-r)\gamma I - \mu R$
+
+$\delta I / \delta t = \beta SI - (\gamma+\mu)/(1-r) I$
+
+$R_0 = \beta(1- \rho)\nu/(\mu + \gamma)\mu$
 
 To stop an epidemic, we need R0<1.
 
@@ -82,3 +92,17 @@ $S< \gamma \beta$
 
 - make S small by vaccinating
 - make \(\beta\) small by washing hands or social distancing
+- make\(\gamma\) large by quarantine(shorten\(1/\gamma\))
+
+## Vaccination
+
+**herd immunity**: we only need to vaccinate a portion of people to eradicate an infection, the portion is:
+
+$p_c = 1-1/R_0$
+
+## periods
+
+**incubation period**: the time between infection and onset of clinical disease/symptoms
+
+**latent period**: time between infection and becoming infectious
+
