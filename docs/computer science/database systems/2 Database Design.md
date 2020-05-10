@@ -127,3 +127,16 @@ copy all the needed key attributes from related entities (not only the entities 
 - superclass has usual key and attributes
 - subclass has own non-inherited attributes and the key of superclass
 - problem: you have to search both tables to get full information
+
+#### method 2
+
+- use one relation for superclass, one for subclasses
+- if one is the subclass then there is no keys and attributes in superclass
+- problem: you have to find through several relations if you only have a primary key
+- problem: it is troublesome to list all subclass-only attributes
+
+#### method 3
+
+- use only one big relation for all the attributes of superclasses and subclasses
+- if there is no certain attribute for one, then just set it to empty or null
+- problem: you have to deal with these null values

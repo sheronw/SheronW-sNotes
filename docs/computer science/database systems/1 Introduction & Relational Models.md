@@ -58,7 +58,7 @@ the relation obtained by selecting attributes from the relation and remove other
 
 #### selection
 
-$\sigma_C(R)$
+$$\sigma_C(R)$$
 
 the set of tuples in R which satisfy the condition C
 
