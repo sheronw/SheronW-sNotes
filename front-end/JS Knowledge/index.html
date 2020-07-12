@@ -843,6 +843,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#value-type" class="md-nav__link">
+    Value &amp; Type
+  </a>
+  
+    <nav class="md-nav" aria-label="Value &amp; Type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-null" class="md-nav__link">
+    check null
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1127,6 +1147,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#value-type" class="md-nav__link">
+    Value &amp; Type
+  </a>
+  
+    <nav class="md-nav" aria-label="Value &amp; Type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-null" class="md-nav__link">
+    check null
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1148,12 +1188,11 @@
 <p>The built-in <code>shift()</code> is not the most efficient method. Sometimes you just need a pointer and clean up the memory periodically.</p>
 <h2 id="object">Object</h2>
 <p>Could use this to implement one simple Set. (Also a built-in Set in ES6)</p>
-<p><code>.hasOwnProperty("x")</code> check if this object has a certain property x</p>
+<p><code>.hasOwnProperty("x")</code> checks if this object has a certain property x</p>
 <p><code>delete obj["x"]/ obj.x</code> deletes this property &amp; data</p>
 <h2 id="function">Function</h2>
 <h3 id="this-arrowfunction">this &amp; arrowfunction</h3>
-<p>https://frontarm.com/james-k-nelson/when-to-use-arrow-functions/
-太长不看版：js function中的this与这个function本身有关，即使它被包在object内；然而arrow function的this由外部决定，所以这里要用arrow functinon……之前一定是在哪里看到这个知识点，然而忘了。
+<p><a href="https://frontarm.com/james-k-nelson/when-to-use-arrow-functions/">太长不看版</a>：js function中的this与这个function本身有关，即使它被包在object内；然而arrow function的this由外部决定，所以这里要用arrow functinon……之前一定是在哪里看到这个知识点，然而忘了。
 补充：可以使用bind函数将某个函数中的this与某个对象绑定</p>
 <script src="https://gist.github.com/sheronw/2ce2ecb7d06c85e0cc96c512fcff17c0.js"></script>
 
@@ -1166,6 +1205,17 @@
 <p>so when you declar <code>var</code> in an if statement, you could get this variable even outside of the block(but not outside of this function), but <code>let</code> cannot.</p>
 <p>also, <code>var</code> got decleared at the top of each function(even the value assignment is still given at the same line)</p>
 <script src="https://gist.github.com/sheronw/b88c63dc45139626f2f4277cf62b2bba.js"></script>
+
+<h2 id="value-type">Value &amp; Type</h2>
+<h3 id="check-null">check null</h3>
+<pre><code class="javascript">null == null // true
+null === null // true
+null == undefined // true
+</code></pre>
+
+<p>When using double equal to check, the value might be <code>undefined</code> or <code>null</code>, so it is better to use triple equal when you really need <code>null</code>.</p>
+<p>However, in generall we don't really need to distinct them, as they are both falsy values, a more common and easier way is to check its value is false or not, see <a href="https://medium.com/javascript-in-plain-english/how-to-check-for-null-in-javascript-dffab64d8ed5">this article</a>：</p>
+<script src="https://gist.github.com/djD-REK/aac9da6754225d006cd62d8b40df40cb.js"></script>
                 
               
               
