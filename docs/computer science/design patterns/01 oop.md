@@ -7,7 +7,7 @@
 - Inheritance
 - Polymorphism
 
-## Procedure Oriented or Object Orented?
+## Procedure Oriented or Object Oriented?
 
 ### Procedure Oriented?
 
@@ -34,19 +34,21 @@ Also, high maintainability, readability, extensibility, flexibility, simplicity,
 
 ### Abstraction(is-a)
 
-- could only be created by interitance(keyword: extends)
+- could only be created by interitance(keyword: `extends`)
 - including both abstract method and real method
 - all abstract methods have to be implemented by children
+- declare an imcomplete class definition without defining all its methods, so can be a subclass of something else
 
 ### Interface(has-a/behaves like)
 
 - could only have abstract methods(no implementation or vars)
 - all methods have to be implemented by children
-- keyword: implements
+- keyword: `implements`
+- declares a set of related methods outside of any class just like API
 
 ### Why we need abstraction?
 
-Reusabiilty
+Reusabilty
 
 In general, we could implement the abstraction class function using ordinary class, however, there are some problems about that, for example:
 
@@ -118,3 +120,4 @@ put data and logic in the same class, i.e. OOP
 history, easy, simple(logics are mainly included into SQL queries)
 
 But for complex systems is better to use DDD.
+
