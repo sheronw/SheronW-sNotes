@@ -1,12 +1,12 @@
 # 编程语言中的操作符
 
 ### Java
-- << left shift
-- \>\> signed right shift (filled with sign bits)
-- \>\>\> unsigned right shift (filled with 0s)
-- & bitwise and
-- | bitwise or
-- ^ bitwise exclusive or
+- `<<` left shift
+- `>>` signed right shift (filled with sign bits)
+- `>>>` unsigned right shift (filled with 0s)
+- `&` bitwise and
+- `|` bitwise or
+- `^` bitwise exclusive or
 
 
 ### C
@@ -29,7 +29,31 @@ x^0=x
 
 x^1=!x
 
-## 应用……？
-刚刚看到了[这么一道题](https://blog.coca.moe/post/er-jin-zhi-mei-ju)，发现和当初学离散数学的时候遇到的那个小朋友分饼干的题型有点像，都是二进制的应用，就当是位运算的一个实例放在这里了。
+## 1的个数
 
-when x & 1 ==0, the last bit in x is 0
+当初我第一次看到这道题的时候，因为用的是Java，所以首先想到的是 unsigned right shift 然后再 left shift 回来的结果如果相同的话说明这一位为0，不同则为1，然后用同样的方法判断下一位直到数字本身为0。假设数字一共有n比特，那么时间复杂度为O(n)，最好情况是O(1)。
+
+但事实上如果用 mask 的话有更快一点的方案。我们知道 `x & 1`可以推断出最右位是1还是零，那么只要执行一个n次的循环，然后将数字不断向左 shift 判断每一位直到数字本身为0即可，这样的话时间复杂度也为O(n)，但从执行一右一左 shift 变成了只需要执行一次 AND 操作。
+
+更高阶的解法需要一些对位运算的了解。为方便演示，这里以`10101000`这个八位的数字为例：
+
+- 将数字减一，最末位的1变成0，并且在最末位后的0全部变成1，比如`10101000 - 1 = 10100111`
+- 将新数字与原数字相 AND 得到的数字，除最末位的1变成0之外，都与一开始的原数字相同，比如`10100111 & 10101000 = 10100000`，至此我们跳过了所有末尾0，只执行了一次操作就判断出了一个1
+- 同理，继续进行运算：`10100000 - 1 = 10011111 `， `10011111 & 10100000 = 10000000`，又判断出了一次1
+- 继续运算：`10000000 - 1 = 01111111`，`01111111 & 10000000 = 0`，又判断出了一次1
+- 数字为0停止判断，一共有3个1
+
+假设数字中有m个1，那么时间复杂度为O(m)，所以要优于之前的解法。
+
+```javascript
+function count1(n) {
+  let count = 0;
+  while(n!=0) {
+    n = (n - 1) & n;
+    count++;
+  }
+  return count;
+}
+```
+
+O(logn)的解法：population count。
