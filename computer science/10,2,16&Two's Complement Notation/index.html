@@ -339,6 +339,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#big-little-endian" class="md-nav__link">
+    Big &amp; Little Endian
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -505,6 +512,18 @@
   <li class="md-nav__item">
     <a href="../database%20systems/4%20Query%20Processing%20and%20Optimization/" title="4 Query Processing and Optimization" class="md-nav__link">
       4 Query Processing and Optimization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../database%20systems/5%20Database%20in%20Interview/" title="5 Database in Interview" class="md-nav__link">
+      5 Database in Interview
     </a>
   </li>
 
@@ -1085,6 +1104,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#big-little-endian" class="md-nav__link">
+    Big &amp; Little Endian
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1104,9 +1130,10 @@
                 <h1 id="decimalbinaryhextwos-complement-notation">decimal,binary,hex,Two’s Complement Notation</h1>
 <h2 id="_1">二进制转十进制</h2>
 <p>很简单，从右往左加，第一位乘以2的零次方，第二位乘以2的一次方，然后以此类推……
-10101<sub>10</sub>=1*2^4+0*2^3+1*2^2+0*2^1+1*2^0=21
+<script type="math/tex; mode=display">10101_{10}=1\times2^4+0\times2^3+1\times2^2+0\times2^1+1\times2^0=21</script>
 还有一种方法是Horner’s Rule，从左往右算，每次把下一位加在这个结果中作为一个整体。
-10101<sub>10</sub>=(((1*2+0)*2+1)*2+0)*2+1=21</p>
+<script type="math/tex; mode=display">10101_{10}=(((1\times2+0)\times2+1)\times2+0)\times2+1=21</script>
+</p>
 <h2 id="_2">十进制转二进制</h2>
 <p>不断地除以二，直到除不动了为止，每一步得到的余数倒过来就是所求的二进制。
 - <strong>10</strong>/2=5 ...0
@@ -1140,6 +1167,23 @@
 0101 1011 1011 0000 0101 0011 1011 0000
 这个数就是最前面瞎编的那个数的相反数</p>
 <p>哦对了，因为32bits的二进制写起来太长了，所以经常会用十六进制来表示。</p>
+<h2 id="big-little-endian">Big &amp; Little Endian</h2>
+<p><strong>Endianness</strong> 指的是电脑储存多字节数值的顺序。</p>
+<p>Least Significant Byte (LSB) 指的是一个数值中最小的那个字节（不是比特），而 Most Significant Byte (MSB) 指的是一个数值中最大的那个字节。Endianness的大小由他们的储存顺序决定，如果最低的地址中储存的是 MSB，那么就是 Big Endian，而如果最低的地址中储存的是 LSB，那么就是 Little Endian。</p>
+<p>一般来讲，除了JAVA虚拟机恒定用 Big Endian 之外，大小端的读取和存储都是由机器的系统决定的，所以如果机器系统使用的 Endianness 不同，在储存和读取时会出现错误。</p>
+<blockquote>
+<p>如何确定系统是 Big Endian 还是 Little Endian？</p>
+</blockquote>
+<p>第一个想到的是使用位运算符。但位运算符会默认比特已经按照最大的比特到最小的比特排列，所以无法反映系统真实的字节排列顺序。</p>
+<p>我们可以利用C语言的特性：<code>char</code>是一个字节的数据型，因此我们可以将一个整数转换成一个指向<code>char</code>第一个字节（即最低内存地址）的指针，然后查看这个指针指向的数值。以32（也有可能是8）位整数1为例，它的 MSB是0，LSB是1，最大的字节是00（0），最小的字节是01（1）。如果第一个<code>char</code>为0就是 Big Endian，为1就是 Little Endian。</p>
+<pre><code class="c">bool isLittleEndian() {
+  int testNum;
+  char *ptr;
+  testNum = 1;
+  ptr = (char *) &amp;testNum;
+  return (*ptr);
+}
+</code></pre>
                 
               
               

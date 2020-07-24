@@ -363,8 +363,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    应用……？
+  <a href="#1" class="md-nav__link">
+    1的个数
   </a>
   
 </li>
@@ -511,6 +511,18 @@
   <li class="md-nav__item">
     <a href="../database%20systems/4%20Query%20Processing%20and%20Optimization/" title="4 Query Processing and Optimization" class="md-nav__link">
       4 Query Processing and Optimization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../database%20systems/5%20Database%20in%20Interview/" title="5 Database in Interview" class="md-nav__link">
+      5 Database in Interview
     </a>
   </li>
 
@@ -1091,8 +1103,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    应用……？
+  <a href="#1" class="md-nav__link">
+    1的个数
   </a>
   
 </li>
@@ -1116,12 +1128,12 @@
                 <h1 id="_1">编程语言中的操作符</h1>
 <h3 id="java">Java</h3>
 <ul>
-<li>&lt;&lt; left shift</li>
-<li>>> signed right shift (filled with sign bits)</li>
-<li>>>> unsigned right shift (filled with 0s)</li>
-<li>&amp; bitwise and</li>
-<li>| bitwise or</li>
-<li>^ bitwise exclusive or</li>
+<li><code>&lt;&lt;</code> left shift</li>
+<li><code>&gt;&gt;</code> signed right shift (filled with sign bits)</li>
+<li><code>&gt;&gt;&gt;</code> unsigned right shift (filled with 0s)</li>
+<li><code>&amp;</code> bitwise and</li>
+<li><code>|</code> bitwise or</li>
+<li><code>^</code> bitwise exclusive or</li>
 </ul>
 <h3 id="c">C</h3>
 <p>大致与Java相同，只是没有unsigned right shift，具体会怎么shift取决于数据型本身。</p>
@@ -1135,9 +1147,29 @@
 <h3 id="invert-bits">invert bits</h3>
 <p>x^0=x</p>
 <p>x^1=!x</p>
-<h2 id="_3">应用……？</h2>
-<p>刚刚看到了<a href="https://blog.coca.moe/post/er-jin-zhi-mei-ju">这么一道题</a>，发现和当初学离散数学的时候遇到的那个小朋友分饼干的题型有点像，都是二进制的应用，就当是位运算的一个实例放在这里了。</p>
-<p>when x &amp; 1 ==0, the last bit in x is 0</p>
+<h2 id="1">1的个数</h2>
+<p>当初我第一次看到这道题的时候，因为用的是Java，所以首先想到的是 unsigned right shift 然后再 left shift 回来的结果如果相同的话说明这一位为0，不同则为1，然后用同样的方法判断下一位直到数字本身为0。假设数字一共有n比特，那么时间复杂度为O(n)，最好情况是O(1)。</p>
+<p>但事实上如果用 mask 的话有更快一点的方案。我们知道 <code>x &amp; 1</code>可以推断出最右位是1还是零，那么只要执行一个n次的循环，然后将数字不断向左 shift 判断每一位直到数字本身为0即可，这样的话时间复杂度也为O(n)，但从执行一右一左 shift 变成了只需要执行一次 AND 操作。</p>
+<p>更高阶的解法需要一些对位运算的了解。为方便演示，这里以<code>10101000</code>这个八位的数字为例：</p>
+<ul>
+<li>将数字减一，最末位的1变成0，并且在最末位后的0全部变成1，比如<code>10101000 - 1 = 10100111</code></li>
+<li>将新数字与原数字相 AND 得到的数字，除最末位的1变成0之外，都与一开始的原数字相同，比如<code>10100111 &amp; 10101000 = 10100000</code>，至此我们跳过了所有末尾0，只执行了一次操作就判断出了一个1</li>
+<li>同理，继续进行运算：<code>10100000 - 1 = 10011111</code>， <code>10011111 &amp; 10100000 = 10000000</code>，又判断出了一次1</li>
+<li>继续运算：<code>10000000 - 1 = 01111111</code>，<code>01111111 &amp; 10000000 = 0</code>，又判断出了一次1</li>
+<li>数字为0停止判断，一共有3个1</li>
+</ul>
+<p>假设数字中有m个1，那么时间复杂度为O(m)，所以要优于之前的解法。</p>
+<pre><code class="javascript">function count1(n) {
+  let count = 0;
+  while(n!=0) {
+    n = (n - 1) &amp; n;
+    count++;
+  }
+  return count;
+}
+</code></pre>
+
+<p>O(logn)的解法：population count。</p>
                 
               
               
