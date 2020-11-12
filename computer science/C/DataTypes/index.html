@@ -8,8 +8,9 @@
       
       
       
+      
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
     
     
       
@@ -17,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.38780c08.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.358818c7.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f72e892.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f0267088.min.css">
         
       
     
@@ -65,7 +66,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="../../.." title="SheronW&#39;s Notes" class="md-header-nav__button md-logo" aria-label="SheronW's Notes">
       
@@ -137,7 +140,9 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="SheronW&#39;s Notes" class="md-nav__button md-logo" aria-label="SheronW's Notes">
       
@@ -334,6 +339,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../BasicUNIXProcess/" class="md-nav__link">
+      Basic UNIX process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -397,6 +414,20 @@
         <li class="md-nav__item">
   <a href="#function" class="md-nav__link">
     function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#struct" class="md-nav__link">
+    struct
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arraylist" class="md-nav__link">
+    arraylist
   </a>
   
 </li>
@@ -1066,6 +1097,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#struct" class="md-nav__link">
+    struct
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arraylist" class="md-nav__link">
+    arraylist
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1115,6 +1160,46 @@ int *f2(const void *v1, const void *v2);
 // f1 is a pointer to a function that returns int
 int (*f1)(const void *v1,const void *v2);
 </code></pre>
+<h2 id="struct">struct</h2>
+<pre><code class="language-c">struct Pt {
+    double x;
+    double y;
+};
+
+int main() {
+    struct Pt p1 = {1.2, 3.3};
+    double x1 = p1.x;
+    struct Pt *p2;
+    p2 = &amp;p1;
+    x1 = (*p2).x;
+    x1 = p2-&gt;x;
+}
+</code></pre>
+<pre><code class="language-c">struct Node {
+    struct Node *next;
+    int val;
+};
+
+struct Node *creatNode(int x) {
+    struct Node *node = malloc(sizeof(struct Node));
+    if (!node) {
+        // check if we could allocate
+        return NULL;
+    }
+    node-&gt;val = x;
+    node-&gt;next = NULL;
+    return node;
+}
+
+int main() {
+    struct Node *node = createNode(1);
+    assert(node);
+    free(node);
+}
+</code></pre>
+<h2 id="arraylist">arraylist</h2>
+<p>Everything in list is on stack.</p>
+<p>In memory, stack goes downward from top while heap goes upwards from bottom.</p>
                 
               
               
@@ -1133,7 +1218,7 @@ int (*f1)(const void *v1,const void *v2);
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../float/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../BasicUNIXProcess/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1142,7 +1227,7 @@ int (*f1)(const void *v1,const void *v2);
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                How to save floating point Numbers?
+                Basic UNIX process
               </div>
             </div>
           </a>
@@ -1181,8 +1266,8 @@ int (*f1)(const void *v1,const void *v2);
       
     </div>
     
-      <script src="../../../assets/javascripts/vendor.77e55a48.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
