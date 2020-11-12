@@ -39,6 +39,12 @@
 - superkey: any set of attributes which satisfies uniqueness condition
 - key: a minimal superkey, no proper subset of the key is a superkey
 
+### ER Model
+
+**Entity**: real-world object distinguishable from other objects. An entity is described using a set of attributes.
+
+**Entity Set**: A collection of similar entities. All entities in an entity set have the same set of attributes. Each entity set has a key.
+
 ## Relational Algebra
 
 ### ordinary set operations

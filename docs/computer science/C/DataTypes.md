@@ -58,3 +58,51 @@ int *f2(const void *v1, const void *v2);
 // f1 is a pointer to a function that returns int
 int (*f1)(const void *v1,const void *v2);
 ```
+
+## struct
+
+```c
+struct Pt {
+    double x;
+    double y;
+};
+
+int main() {
+    struct Pt p1 = {1.2, 3.3};
+    double x1 = p1.x;
+    struct Pt *p2;
+    p2 = &p1;
+    x1 = (*p2).x;
+    x1 = p2->x;
+}
+```
+
+```c
+struct Node {
+    struct Node *next;
+    int val;
+};
+
+struct Node *creatNode(int x) {
+    struct Node *node = malloc(sizeof(struct Node));
+    if (!node) {
+        // check if we could allocate
+        return NULL;
+    }
+    node->val = x;
+    node->next = NULL;
+    return node;
+}
+
+int main() {
+    struct Node *node = createNode(1);
+    assert(node);
+    free(node);
+}
+```
+
+## arraylist
+
+Everything in list is on stack.
+
+In memory, stack goes downward from top while heap goes upwards from bottom.
