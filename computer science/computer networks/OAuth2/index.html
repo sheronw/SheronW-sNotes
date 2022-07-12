@@ -8,19 +8,19 @@
       
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
     
     
       
-        <title>Concurrency - SheronW's Notes</title>
+        <title>OAuth2.0 - SheronW's Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c5ef100.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c5ef100.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
         
       
     
@@ -35,7 +35,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#concurrency" class="md-skip">
+        <a href="#oauth20" class="md-skip">
           Skip to content
         </a>
       
@@ -73,7 +73,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="SheronW&#39;s Notes" class="md-header__button md-logo" aria-label="SheronW's Notes" data-md-component="logo">
+    <a href="../../.." title="SheronW&#39;s Notes" class="md-header__button md-logo" aria-label="SheronW's Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Concurrency
+              OAuth2.0
             
           </span>
         </div>
@@ -159,7 +159,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="SheronW&#39;s Notes" class="md-nav__button md-logo" aria-label="SheronW's Notes" data-md-component="logo">
+    <a href="../../.." title="SheronW&#39;s Notes" class="md-nav__button md-logo" aria-label="SheronW's Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -178,7 +178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Index
       </a>
     </li>
@@ -193,7 +193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../epidemiology/" class="md-nav__link">
+      <a href="../../../epidemiology/" class="md-nav__link">
         Epidemiology
       </a>
     </li>
@@ -234,7 +234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Linux/basic_vps/" class="md-nav__link">
+      <a href="../../../Linux/basic_vps/" class="md-nav__link">
         new VPS setup log
       </a>
     </li>
@@ -248,7 +248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Linux/efbscreen/" class="md-nav__link">
+      <a href="../../../Linux/efbscreen/" class="md-nav__link">
         EH Forwarder Bot 2.0保持后台运行（Screen）
       </a>
     </li>
@@ -298,7 +298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10%2C2%2C16%26Two%27s%20Complement%20Notation/" class="md-nav__link">
+      <a href="../../10%2C2%2C16%26Two%27s%20Complement%20Notation/" class="md-nav__link">
         decimal,binary,hex,Two’s Complement Notation
       </a>
     </li>
@@ -310,120 +310,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Concurrency
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Concurrency/" class="md-nav__link">
         Concurrency
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-concepts" class="md-nav__link">
-    Basic Concepts
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#threads" class="md-nav__link">
-    Threads
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-threads-vs-user-threads" class="md-nav__link">
-    System Threads vs User Threads
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitors-and-semaphores" class="md-nav__link">
-    Monitors and Semaphores
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dead-locks" class="md-nav__link">
-    Dead Locks
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodejs" class="md-nav__link">
-    Node.js
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#busy-waiting" class="md-nav__link">
-    Busy Waiting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#producerconsumer" class="md-nav__link">
-    Producer/Consumer
-  </a>
-  
-    <nav class="md-nav" aria-label="Producer/Consumer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-dining-philosophers" class="md-nav__link">
-    The Dining Philosophers
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -435,7 +326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bit_level_operators/" class="md-nav__link">
+      <a href="../../bit_level_operators/" class="md-nav__link">
         编程语言中的操作符
       </a>
     </li>
@@ -449,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chessAI/" class="md-nav__link">
+      <a href="../../chessAI/" class="md-nav__link">
         Chess AI
       </a>
     </li>
@@ -463,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../float/" class="md-nav__link">
+      <a href="../../float/" class="md-nav__link">
         How to save floating point Numbers?
       </a>
     </li>
@@ -503,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C/BasicUNIXProcess/" class="md-nav__link">
+      <a href="../../C/BasicUNIXProcess/" class="md-nav__link">
         Basic UNIX process
       </a>
     </li>
@@ -517,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C/DataTypes/" class="md-nav__link">
+      <a href="../../C/DataTypes/" class="md-nav__link">
         Data Types
       </a>
     </li>
@@ -531,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C/Formatted-I-O-Line-Input-Scanf-C/" class="md-nav__link">
+      <a href="../../C/Formatted-I-O-Line-Input-Scanf-C/" class="md-nav__link">
         Formatted I/O, Line Input, Scanf - C
       </a>
     </li>
@@ -550,12 +441,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" checked>
       
       
       
@@ -576,11 +469,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../computer%20networks/OAuth2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          OAuth2.0
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         OAuth2.0
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-vs-authorization" class="md-nav__link">
+    authentication vs authorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delegated-authorization" class="md-nav__link">
+    Delegated Authorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#back-channel-vs-front-channel" class="md-nav__link">
+    back channel vs front channel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflows" class="md-nav__link">
+    Workflows
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -592,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../computer%20networks/TCP-congestion-control/" class="md-nav__link">
+      <a href="../TCP-congestion-control/" class="md-nav__link">
         TCP Congestion Control
       </a>
     </li>
@@ -639,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database%20systems/1%20Introduction%20%26%20Relational%20Models/" class="md-nav__link">
+      <a href="../../database%20systems/1%20Introduction%20%26%20Relational%20Models/" class="md-nav__link">
         1 Introduction & Relational Model
       </a>
     </li>
@@ -653,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database%20systems/2%20Database%20Design/" class="md-nav__link">
+      <a href="../../database%20systems/2%20Database%20Design/" class="md-nav__link">
         2 Database Design
       </a>
     </li>
@@ -667,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database%20systems/3%20Transactions/" class="md-nav__link">
+      <a href="../../database%20systems/3%20Transactions/" class="md-nav__link">
         3 Transactions
       </a>
     </li>
@@ -681,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database%20systems/4%20Query%20Processing%20and%20Optimization/" class="md-nav__link">
+      <a href="../../database%20systems/4%20Query%20Processing%20and%20Optimization/" class="md-nav__link">
         4 Query Processing and Optimization
       </a>
     </li>
@@ -695,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database%20systems/5%20Database%20in%20Interview/" class="md-nav__link">
+      <a href="../../database%20systems/5%20Database%20in%20Interview/" class="md-nav__link">
         5 Database in Interview
       </a>
     </li>
@@ -742,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design%20patterns/01%20oop/" class="md-nav__link">
+      <a href="../../design%20patterns/01%20oop/" class="md-nav__link">
         Object-Oriented Programming
       </a>
     </li>
@@ -756,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design%20patterns/02%20basic%20design%20pattern%20definitions/" class="md-nav__link">
+      <a href="../../design%20patterns/02%20basic%20design%20pattern%20definitions/" class="md-nav__link">
         Basic Design Pattern Definitions
       </a>
     </li>
@@ -770,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design%20patterns/cleanCode/" class="md-nav__link">
+      <a href="../../design%20patterns/cleanCode/" class="md-nav__link">
         Clean Code
       </a>
     </li>
@@ -817,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/1-1%20finite%20automata/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/1-1%20finite%20automata/" class="md-nav__link">
         1.1 finite automata
       </a>
     </li>
@@ -831,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/1-2%20nondeterminism/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/1-2%20nondeterminism/" class="md-nav__link">
         1.2 nondeterminism
       </a>
     </li>
@@ -845,7 +800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/1-3%20regular%20expressions/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/1-3%20regular%20expressions/" class="md-nav__link">
         1.3 regular expressions
       </a>
     </li>
@@ -859,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/2-1%20grammar/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/2-1%20grammar/" class="md-nav__link">
         2.1 Context-Free & PDA
       </a>
     </li>
@@ -873,7 +828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/2-2%20CFG%20Normal%20Forms/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/2-2%20CFG%20Normal%20Forms/" class="md-nav__link">
         2.2 Normal Forms for CFG
       </a>
     </li>
@@ -887,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/2-3%20Pumping%20Lemma/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/2-3%20Pumping%20Lemma/" class="md-nav__link">
         2.3 Pumping Lemma for CFL
       </a>
     </li>
@@ -901,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/2-4%20CFL%20properties/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/2-4%20CFL%20properties/" class="md-nav__link">
         2.4 CFL Properties
       </a>
     </li>
@@ -915,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/2-5%20Decision%20Algorithms/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/2-5%20Decision%20Algorithms/" class="md-nav__link">
         2.5 Decision Algorithms
       </a>
     </li>
@@ -929,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/3-1%20Begin%20Turing%20Machines/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/3-1%20Begin%20Turing%20Machines/" class="md-nav__link">
         3.1 Begin Turing Machines
       </a>
     </li>
@@ -943,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/4-1%20Undecidability/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/4-1%20Undecidability/" class="md-nav__link">
         4.1 Undecidability
       </a>
     </li>
@@ -957,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/4-2%20More%20Undecidability%20Problems/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/4-2%20More%20Undecidability%20Problems/" class="md-nav__link">
         4.2 More Undecidability Problems
       </a>
     </li>
@@ -971,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory%20of%20computation/5-1%20Cook-Levin%20Theorem/" class="md-nav__link">
+      <a href="../../theory%20of%20computation/5-1%20Cook-Levin%20Theorem/" class="md-nav__link">
         5.1 Cook-Levin Theorem
       </a>
     </li>
@@ -1026,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../excerpt/Yong-Heng-Fu-Xian/" class="md-nav__link">
+      <a href="../../../excerpt/Yong-Heng-Fu-Xian/" class="md-nav__link">
         永恒复现
       </a>
     </li>
@@ -1040,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../excerpt/akayaakashiyaayakashino/" class="md-nav__link">
+      <a href="../../../excerpt/akayaakashiyaayakashino/" class="md-nav__link">
         あかやあかしやあやかしの
       </a>
     </li>
@@ -1054,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../excerpt/stylePeriods/" class="md-nav__link">
+      <a href="../../../excerpt/stylePeriods/" class="md-nav__link">
         Three Style Periods of the Common Practice Era
       </a>
     </li>
@@ -1102,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../front-end/DOM%20Scripting/" class="md-nav__link">
+      <a href="../../../front-end/DOM%20Scripting/" class="md-nav__link">
         DOM Scripting Notes
       </a>
     </li>
@@ -1116,7 +1071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../front-end/DevTools/" class="md-nav__link">
+      <a href="../../../front-end/DevTools/" class="md-nav__link">
         DevTools Notes
       </a>
     </li>
@@ -1130,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../front-end/JS%20Knowledge/" class="md-nav__link">
+      <a href="../../../front-end/JS%20Knowledge/" class="md-nav__link">
         JS Knowledge
       </a>
     </li>
@@ -1144,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../front-end/React%20Native/" class="md-nav__link">
+      <a href="../../../front-end/React%20Native/" class="md-nav__link">
         React Native
       </a>
     </li>
@@ -1192,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../life/%E8%A1%A3%E6%9C%8D%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E7%A9%BF/" class="md-nav__link">
+      <a href="../../../life/%E8%A1%A3%E6%9C%8D%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E7%A9%BF/" class="md-nav__link">
         衣服应该怎么穿
       </a>
     </li>
@@ -1240,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../research/Belmont_Principles/" class="md-nav__link">
+      <a href="../../../research/Belmont_Principles/" class="md-nav__link">
         Belmont Principles
       </a>
     </li>
@@ -1254,7 +1209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../research/Cognitive%20Walkthrough/" class="md-nav__link">
+      <a href="../../../research/Cognitive%20Walkthrough/" class="md-nav__link">
         Cognitive Walkthrough Method
       </a>
     </li>
@@ -1268,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../research/Non-parametric%20Tests/" class="md-nav__link">
+      <a href="../../../research/Non-parametric%20Tests/" class="md-nav__link">
         Non-parametric Tests
       </a>
     </li>
@@ -1282,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../research/Privacy%20%26%20Human%20Behavior%20in%20the%20Age%20of%20Information/" class="md-nav__link">
+      <a href="../../../research/Privacy%20%26%20Human%20Behavior%20in%20the%20Age%20of%20Information/" class="md-nav__link">
         Privacy & Human Behavior in the Age of Information笔记
       </a>
     </li>
@@ -1296,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../research/Statistics%20Crash%20Course/" class="md-nav__link">
+      <a href="../../../research/Statistics%20Crash%20Course/" class="md-nav__link">
         CrashCourse Statistics
       </a>
     </li>
@@ -1337,77 +1292,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-concepts" class="md-nav__link">
-    Basic Concepts
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#threads" class="md-nav__link">
-    Threads
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-threads-vs-user-threads" class="md-nav__link">
-    System Threads vs User Threads
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitors-and-semaphores" class="md-nav__link">
-    Monitors and Semaphores
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dead-locks" class="md-nav__link">
-    Dead Locks
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodejs" class="md-nav__link">
-    Node.js
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#busy-waiting" class="md-nav__link">
-    Busy Waiting
+  <a href="#authentication-vs-authorization" class="md-nav__link">
+    authentication vs authorization
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#producerconsumer" class="md-nav__link">
-    Producer/Consumer
-  </a>
-  
-    <nav class="md-nav" aria-label="Producer/Consumer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-dining-philosophers" class="md-nav__link">
-    The Dining Philosophers
+  <a href="#delegated-authorization" class="md-nav__link">
+    Delegated Authorization
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#back-channel-vs-front-channel" class="md-nav__link">
+    back channel vs front channel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflows" class="md-nav__link">
+    Workflows
+  </a>
   
 </li>
       
@@ -1425,72 +1333,65 @@
                 
 
 
-<h1 id="concurrency">Concurrency</h1>
-<h2 id="basic-concepts">Basic Concepts</h2>
-<h3 id="threads">Threads</h3>
-<p>The fundamental unit of execution within an application. Each thread has its own stack and runs independently from other threads (but they share resources by default).</p>
-<p><strong>data corruption</strong>: a side effect when two threads write data to memory at the same time</p>
-<p>Implementation:</p>
+<h1 id="oauth20">OAuth2.0</h1>
+<h2 id="authentication-vs-authorization">authentication vs authorization</h2>
+<p>not designed for authentication!</p>
+<p>just use OpenID Connect for authentication.</p>
+<h2 id="delegated-authorization">Delegated Authorization</h2>
+<p>e.g.: I authorize a third party application to get my google profile.</p>
 <ul>
-<li><strong>native/kernel-level threads</strong>: threads managed by OS</li>
-<li><strong>green threads</strong>: threads implemented by software layers such as VM</li>
+<li>
+<p><strong>Resource owner</strong>: user who owns resource and could authorize you to get that <em>(me)</em></p>
+</li>
+<li>
+<p><strong>Client</strong>: the application that needs to get access to resource <em>(third party)</em></p>
+</li>
+<li>
+<p><strong>Authorization server</strong>: system to authorize certain permission <em>(the server to login to your google account)</em></p>
+</li>
+<li>
+<p><strong>Resource server</strong>: server that stores resource <em>(profile data)</em>, could be the same as authorization server</p>
+</li>
+<li>
+<p><strong>Authorization grant</strong>: whole workflow, proves that user has authorized</p>
+</li>
+<li>
+<p><strong>Redirect URI</strong>: or callback, where should I go back at the end of the workflow</p>
+</li>
+<li>
+<p><strong>Access token</strong>: client needs this to get data</p>
+</li>
 </ul>
-<p><strong>preemptive threading</strong>: OS switches from thread to thread, giving each thread short time to run</p>
-<p><strong>context switch</strong>: suspend one thread to let another thread run</p>
-<h3 id="system-threads-vs-user-threads">System Threads vs User Threads</h3>
-<p>System thread is the thread created and managed by the system, and it is the first and the main thread of the application. Usually application will stop when system thread stops. User Thread is created by application to do other tasks such as handling network or user interface then sending events to main thread.</p>
-<h3 id="monitors-and-semaphores">Monitors and Semaphores</h3>
-<p>Two <strong>threads synchronization</strong> mechanisms.</p>
-<p><strong>monitor</strong>: set of routines protected by a mutual exclusion lock</p>
-<p>A thread could execute only when it has a lock and only one thread could have the lock at the same time. A thread that has the lock could waiting for some events and suspend using this routine, and the other waiting thread could do their job at that time. When event occurs, the previous thread could could back.</p>
-<p><strong>semaphore</strong>: a lock that protects a shared resource, have to acquire and release the lock manually, so it is a simpler construct with more complex usage</p>
+<h2 id="back-channel-vs-front-channel">back channel vs front channel</h2>
 <ul>
-<li>mutex semaphore: one thread acquire the lock and other wait until unblocked then enter</li>
-<li>counting semaphores: maximum of n threads at a given time</li>
-<li>event semaphores: notify other threads when an event occurred</li>
+<li>
+<p><strong>backchannel</strong>: highly secure channel <em>(e.g. system we can trust such as server)</em></p>
+</li>
+<li>
+<p><strong>front channel</strong>: less secure channel <em>(e.g. cannot 100% trust browser)</em></p>
+</li>
+<li>
+<p><strong>client id</strong>: not sensitive and could pass along front channel</p>
+</li>
+<li>
+<p><strong>client secret</strong>: sensitive data</p>
+</li>
 </ul>
-<p>System will usually report error or timeout if cannot acquire the resource in a certain time.</p>
-<p>Also, it will be slower when using thread-free features so many library will provide to versions for better performance or safety need.</p>
-<h3 id="dead-locks">Dead Locks</h3>
-<p><del>陷 入 僵 局</del></p>
-<p>Means each thread got permanently stalled when each cannot run to the point of releasing the lock that the other needs. Similar thing happens in SQL transaction.</p>
-<p>How to: when needs to acquire several locks, always acquire the locks in the same order and release them in the same reverse order. This will be hard to implement in big projects, though.</p>
-<h3 id="nodejs">Node.js</h3>
+<h2 id="workflows">Workflows</h2>
 <ul>
-<li>cluster mode: distribute processes to different cores</li>
-<li>worker threads: a new thread that could communicate with main thread (using Promise, for example) and handle some time consuming jobs</li>
+<li>
+<p><strong>authorization code</strong>: front + back</p>
+</li>
+<li>
+<p><strong>implicit</strong>: front channel only, just get token directly without exchange step <em>(e.g. static single page JS application)</em></p>
+</li>
+<li>
+<p><strong>resource owner password credentials</strong>: to make some older systems compatible</p>
+</li>
+<li>
+<p><strong>client credentials</strong>: back channel just post to authorization server directly</p>
+</li>
 </ul>
-<p>Here're <a href="https://tsh.io/blog/simple-guide-concurrency-node-js/">two easy examples</a> (the second one did not handle thread re-use):</p>
-<script src="https://gist.github.com/tsh-code/84cc0ccdd4261aaa5b041ef92e49699d.js"></script>
-<script src="https://gist.github.com/tsh-code/623bee22bb3b0cd032845336dc032855.js"></script>
-<h2 id="busy-waiting">Busy Waiting</h2>
-<p><strong>Busy waiting</strong> means a thread create another thread to do work, continue active but do nothing but using processor cycles, just to wait for the other thread finish the job. We could use monitor or semaphore to avoid it. For example, lock the previous process until the second one ends and notify it. However, if it takes more time to acquire a lock than finish the task, it is more efficient to use a spinlock that busy waiting for a little bit of time. Another possibility is one thread per core, and the first core need to receive data from the second core to do works next. However, this circumstance is rare in high-level languages.</p>
-<h2 id="producerconsumer">Producer/Consumer</h2>
-<blockquote>
-<p>Two threads share a fixed-size buffer and index to access buffer. The producer thread place number into the buffer and the consumer thread remove the number from the buffer.</p>
-</blockquote>
-<p>It is pretty easy to write a non-concurrent version of it, just create two threads that add numbers and remove numbers respectively while true.  However, <code>while true</code> leads to busy waiting, and if they are using the common index without concurrency control, one thread might update index and does nothing then another thread using the wrong index.</p>
-<p>What about changing add or remove function to synchronized function in Java (for example)? When the buffer is empty and remove got called, the producer thread have to busy waiting it end forever. And it is the same when the buffer is full and add got called. Even for the other cases, another thread have to busy waiting for another thread to do the add or remove job then enter.</p>
-<p>So we need to add this condition to the code, when buffer is full during add or empty during remove, we should lock this thread until the buffer is not full or empty. Also, after each remove or add procedure finished successfully,  the thread should notify the other one.</p>
-<h3 id="the-dining-philosophers">The Dining Philosophers</h3>
-<blockquote>
-<p>Five silent philosophers sit at a round table with bowls of spaghetti. Forks are placed between each pair of adjacent philosophers.</p>
-<p>Each philosopher must alternately think and eat. However, a philosopher can only eat spaghetti when they have both left and right forks. Each fork can be held by only one philosopher and so a philosopher can use the fork only if it is not being used by another philosopher. After an individual philosopher finishes eating, they need to put down both forks so that the forks become available to others. A philosopher can only take the fork on their right or the one on their left as they become available and they cannot start eating before getting both forks.</p>
-<p>Eating is not limited by the remaining amounts of spaghetti or stomach space; an infinite supply and an infinite demand are assumed.</p>
-<p><a href="https://en.wikipedia.org/wiki/Dining_philosophers_problem">Dining philosophers problem, Wikipedia</a></p>
-</blockquote>
-<p>First of all, just as the last problem, we could figure out one algorithm without considering concurrency, that is, for each philosopher:</p>
-<ul>
-<li>wait for the left fork available</li>
-<li>wait for the right fork for available</li>
-<li>eat for a while</li>
-<li>put both forks down and repeat all above</li>
-</ul>
-<p>However, this algorithm might leads to a deadlock: for example, all philosophers get the left for available, and they are all waiting for the right fork. As there are only five forks in total this situation will last forever.</p>
-<p>The easiest way to prevent them stay hungry forever is to add a timeout mechanism. If one philosopher hold the left fork and wait for a certain amount of time, then he or she could just put the left fork down. However, even this will work, but it cannot prevent philosophers from reaching the deadlock state.</p>
-<p>Let's see what else we could do. If we mimic the process of picking left fork one by one, the deadlock will happen when the fifth philosopher picks the left fork. So what we could do is to let the last philosopher to pick up the right fork first, which means, if we order the forks from 0 to 4, each philosopher must pick up the available forks that has a smaller order. But in the real world, it is not that practical as we cannot know all details of the huge data we are processing. Also, we could set up a condition that only 4 philosophers could hold the fork(s) at one time, and the result is similar.</p>
-<p>But the method benefits the philosopher in the middle a lot more than others. We could change the rule a little bit, instead of letting all philosophers wait for the left fork then right fork, we could let the odd user pick up left then right while let the even user pick up right then left, which means, if we order the forks from 0 to 4, always force philosophers pick odd forks first. Then we could find that the "competition" for forks got separated into groups in stead of a long line for the whole table.</p>
-<p>Or also, we could introduce a waiter to force the philosopher to pick up the two forks at the same time or just pick up nothing. As there is only one waiter, there could be only one philosopher that gets the permission to pick up both forks at one time.</p>
 
               
             </article>
@@ -1504,7 +1405,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../10%2C2%2C16%26Two%27s%20Complement%20Notation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: decimal,binary,hex,Two’s Complement Notation" rel="prev">
+        <a href="../../C/Formatted-I-O-Line-Input-Scanf-C/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Formatted I/O, Line Input, Scanf - C" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1513,20 +1414,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              decimal,binary,hex,Two’s Complement Notation
+              Formatted I/O, Line Input, Scanf - C
             </div>
           </div>
         </a>
       
       
         
-        <a href="../bit_level_operators/" class="md-footer__link md-footer__link--next" aria-label="Next: 编程语言中的操作符" rel="next">
+        <a href="../TCP-congestion-control/" class="md-footer__link md-footer__link--next" aria-label="Next: TCP Congestion Control" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              编程语言中的操作符
+              TCP Congestion Control
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1556,10 +1457,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.748e2769.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.748e2769.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
